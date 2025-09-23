@@ -21,7 +21,7 @@ export default function HeroBanner({
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 flex items-center justify-center">
           <img
-            src="/images/wave.png"
+            src="/Images/wave.png"
             alt=""
             className="h-[1080px] w-[1920px] max-w-none select-none object-cover opacity-80 blur-[1px]"
           />

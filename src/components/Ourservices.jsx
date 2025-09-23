@@ -11,21 +11,21 @@ const carouselData = [
     number: "01",
     title: "B2B Company",
     image: "/Images/os1.jpg",
-    tags: ["Manufactures", "Service Companies", "Dealers"],
+    tags: ["Experience & Network", "Service Companies", "Dealers"],
   },
   {
     id: "2",
     number: "02",
-    title: "IT Company",
+    title: "E-commerce",
     image: "/Images/os2.jpg",
-    tags: ["Outsourcing", "Product Company", "SaaS"],
+    tags: ["Marketing", "Branding", "High-Value Customers"],
   },
   {
     id: "3",
     number: "03",
-    title: "Internet Projects",
+    title: "Real Estate",
     image: "/Images/os3.jpg",
-    tags: ["E-Commerce sphere", "Goal to Action"],
+    tags: ["Budget Potential", "Lead Generations"],
   },
 ]
 

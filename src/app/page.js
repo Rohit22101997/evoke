@@ -9,6 +9,8 @@ import Ourservices from "@/components/Ourservices"
 import Ourser from "@/components/Ourser"
 import Counter from "@/components/Counter";
 import Gradienttext from "@/components/Gradienttext";
+import MarqueeAnimation from "@/components/MarqueeAnimation"
+
 
 
 export default function Home() {
@@ -26,6 +28,7 @@ export default function Home() {
        
        <Ourservices/>
        <Ourser/>
+       <MarqueeAnimation />
        <Gradienttext />
        <Counter />
        <AiQuote/>

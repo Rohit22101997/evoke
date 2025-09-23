@@ -56,8 +56,8 @@ export default function SpecializationCarousel() {
               Specialization
             </h2>
             <p className="text-gray-600 mt-4 text-lg leading-relaxed">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit.
+              At EVOKE DIGITAL, we don’t just run campaigns. We craft measurable growth strategies.
+Our team blends data, design, and creativity to help your brand shine across every digital touchpoint.
             </p>
           </div>
 

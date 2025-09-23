@@ -11,17 +11,17 @@ const counters = [
   {
     value: 10,
     suffix: "+",
-    label: "Innovation and valuable insights",
+    label: "Breakthroughs",
   },
   {
     value: 10,
-    suffix: "m",
-    label: "Highly efficient financial strategies",
+    suffix: "+",
+    label: "ROI-focused campaigns",
   },
   {
     value: 50,
-    suffix: "m",
-    label: "Users worldwide, providing them with",
+    suffix: "K",
+    label: "Engaged Users",
   },
 ]
 

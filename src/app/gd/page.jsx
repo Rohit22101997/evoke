@@ -10,7 +10,7 @@ import Tittlegd from '@/components/Tittlegd';
 
 export default function page() {
   return (
-    <div>
+    <div className=''>
     <Navbar/>
     <Herobannergd />
     <Clientgd />

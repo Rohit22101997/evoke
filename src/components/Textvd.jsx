@@ -48,7 +48,7 @@ export default function OceanHeader() {
                 fill: "black",
               }}
             >
-              EVOKE DIGITAL
+              EVOKE
             </text>
           </mask>
         </defs>

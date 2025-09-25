@@ -18,21 +18,13 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* Existing dark overlay (optional, you can remove if too dark) */}
-      {/* <div className="absolute inset-0 bg-foreground/70" aria-hidden="true" /> */}
-      {/* <div
-        className="absolute inset-0 bg-gradient-to-r from-foreground/60 via-foreground/40 to-transparent"
-        aria-hidden="true"
-      /> */}
-
-      {/* Center vertical divider */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-0 h-full w-px bg-foreground/20"
       />
 
       {/* Content */}
-      <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28 md:px-8 lg:py-36">
+      <div className="relative mx-auto max-w-7xl px-6 py-10 sm:py-20 md:px-8 lg:py-20">
         <div className="h-1 w-28 bg-brand" />
 
         <div className="mt-8 max-w-3xl">

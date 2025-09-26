@@ -7,12 +7,14 @@ import Section3ow from "@/components/Section3ow";
 import Section1ow from "@/components/Section1ow";
 import Section6ow from "@/components/Section6ow";
 import Section7ow from "@/components/Section7ow";
+import Section8ow from "@/components/Section8ow";
 
 
 export default function page() {
   return (
     <div>
     <Navbar/>
+    <Section8ow />
     <Section7ow />
     <Section6ow />
     <Section1ow />

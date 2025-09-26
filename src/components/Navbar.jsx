@@ -102,8 +102,8 @@ export default function Navbar() {
                 <Link href="/aboutus" className="block px-4 py-2 hover:bg-gray-800">
                   About Us
                 </Link>
-                <Link href="/team" className="block px-4 py-2 hover:bg-gray-800">
-                  Team
+                <Link href="/contactus" className="block px-4 py-2 hover:bg-gray-800">
+                  Contact Us
                 </Link>
                 <Link href="/history" className="block px-4 py-2 hover:bg-gray-800">
                   History

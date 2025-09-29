@@ -7,7 +7,7 @@ export default function QuoteSection() {
       {/* Absolute positioned large quote icon */}
       <div className="absolute top-1/2 left-1/2 -translate-x-[calc(100%+80px)] -translate-y-[calc(100%+80px)] 
                       md:left-[10%] md:top-[15%] md:-translate-x-0 md:-translate-y-0 
-                      z-0 opacity-10 md:opacity-10 pointer-events-none">
+                      z-0 opacity-20 md:opacity-10 pointer-events-none">
         {/* SVG to match the quote icon's outline style */}
         <svg
           width="200"
@@ -37,22 +37,22 @@ export default function QuoteSection() {
           {/* Quote 1 */}
           <div>
             <span className="font-bold text-orange-500 mr-2 text-2xl sm:text-3xl">①</span>
-            Where brands find their voice, creativity assembles, and ideas thrive. At Nik® Studio, each team member is a unique Lego piece, innovating with confidence and celebrating simplicity.
+            Creativity clicks together seamlessly. Each team member adds a unique spark, shaping brands with effortless precision.
           </div>
 
           {/* Quote 2 */}
           <div>
             <span className="font-bold text-orange-500 mr-2 text-2xl sm:text-3xl">②</span>
-            Leading brands choose us because we preserve brand identity while pushing creative boundaries. Specializing in website and branding design, we bring your vision to life piece by piece.
+            We protect your brand’s essence while pushing creative limits. From website experiences to full-scale branding, we craft each element with precision, bringing your vision to life, piece by piece.
           </div>
 
           {/* Footer */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mt-12 pt-8 border-t border-gray-700 text-gray-400 text-sm sm:text-base">
             <div className="order-2 sm:order-1 mt-4 sm:mt-0">
-              <span>&mdash; Habo Peon</span> <span className="mx-2 hidden sm:inline">|</span> <span>Our Founder WPP Studio</span>
+              <span>&mdash; Rohit Kumar</span> <span className="mx-2 hidden sm:inline">|</span> <span>Founder Evoke Digital</span>
             </div>
             <div className="order-1 sm:order-2">
-              <span className="text-gray-500">2023</span>
+              <span className="text-gray-500">2025</span>
             </div>
           </div>
         </div>

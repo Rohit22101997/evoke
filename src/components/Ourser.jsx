@@ -6,28 +6,37 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const services = [
   {
     id: 1,
+    title: "Graphic Designing",
+    description:
+      "Bring your brand to life with stunning visuals that captivate and inspire. Our design solutions blend creativity with strategy for maximum impact. Transform ideas into designs that leave a lasting impression.",
+    image: "/Images/developer-workspace-with-code-on-multiple-screens.jpg",
+    imageAlt: "Developer workspace with code",
+  } ,
+  {
+    id: 2,
     title: "Advertising",
     description:
-      "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.",
+      "We design high-impact ad campaigns that grab attention fast.From social media to search, every placement is data-driven. Result: measurable reach, stronger leads, and real growth.",
     image: "/Images/people-working-on-laptops-collaborating-on-adverti.jpg",
     imageAlt: "Team collaborating on advertising project",
   },
   {
-    id: 2,
+    id: 3,
     title: "Web Development",
     description:
-      "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.",
+      "Elegant design meets powerful technology.We craft secure, high-performing websites tailored to your brand.Experience, scalability, and speed—built for lasting impact.",
     image: "/Images/developer-workspace-with-code-on-multiple-screens.jpg",
     imageAlt: "Developer workspace with code",
   },
   {
-    id: 3,
+    id: 4,
     title: "Analytics",
     description:
-      "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.",
+      "Unlock the power of data with our advanced analytics solutions. Track, measure, and optimize every campaign to maximize ROI. Turn insights into action and drive smarter marketing decisions.",
     image: "/Images/business-professionals-discussing-analytics-and-da.jpg",
     imageAlt: "Business professionals discussing analytics",
   },
+  
 ]
 
 export default function ServicesCarousel() {
@@ -50,11 +59,12 @@ export default function ServicesCarousel() {
       {/* Header */}
       <div className="mb-8 sm:mb-12 text-center sm:text-left">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-          Our Services
+          <b> OUR SERVICES </b>
         </h2>
         <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto sm:mx-0">
-          Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport
-          etc, litot Europa usa li sam vocabular.
+          We craft data driven marketing strategies that build brands and boost growth.
+From social media to SEO, every campaign is tailored to your audience.
+Design, content, and performance
         </p>
       </div>
 

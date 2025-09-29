@@ -57,33 +57,29 @@ export default function ContactForm() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-    
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Reset form on success
-      setFormData({
-        name: '',
-        email: '',
-        contact: '',
-        message: ''
-      });
-      
-      alert('Message sent successfully!');
-    } catch (error) {
-      alert('Failed to send message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  e.preventDefault();
+  if (!validateForm()) return;
+  setIsSubmitting(true);
+
+  try {
+    const res = await fetch('http://localhost:3002/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await res.json();
+    if (!res.ok) throw new Error(result.error || 'Something went wrong');
+
+    setFormData({ name: '', email: '', contact: '', message: '' });
+    alert('Message saved to database!');
+  } catch (err) {
+    alert(err.message);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4">

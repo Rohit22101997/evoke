@@ -15,12 +15,12 @@ export default function Section1cm() {
               textShadow: '2px 2px 0px rgba(255,255,255,0.1), 4px 4px 0px rgba(0,0,0,0.2)' 
             }}
           >
-            CREATIVE
+            THINK
             <br />
-            INSPIRATION
+             CREATE
             <br />
             <span className="relative inline-block pb-1">
-              BLOCKS
+              DELIVER
               {/* Underline for BLOCKS, positioned absolutely */}
               <span className="absolute bottom-0 left-0 w-2/3 h-1 bg-white"></span>
             </span>

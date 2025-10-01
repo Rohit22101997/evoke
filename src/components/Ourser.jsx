@@ -9,7 +9,7 @@ const services = [
     title: "Graphic Designing",
     description:
       "Bring your brand to life with stunning visuals that captivate and inspire. Our design solutions blend creativity with strategy for maximum impact. Transform ideas into designs that leave a lasting impression.",
-    image: "/Images/developer-workspace-with-code-on-multiple-screens.jpg",
+    image: "/Images/home1.jpg",
     imageAlt: "Developer workspace with code",
   } ,
   {
@@ -17,7 +17,7 @@ const services = [
     title: "Advertising",
     description:
       "We design high-impact ad campaigns that grab attention fast.From social media to search, every placement is data-driven. Result: measurable reach, stronger leads, and real growth.",
-    image: "/Images/people-working-on-laptops-collaborating-on-adverti.jpg",
+    image: "/Images/home2.jpg",
     imageAlt: "Team collaborating on advertising project",
   },
   {
@@ -58,10 +58,10 @@ export default function ServicesCarousel() {
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       {/* Header */}
       <div className="mb-8 sm:mb-12 text-center sm:text-left">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-3 sm:mb-4">
           <b> OUR SERVICES </b>
         </h2>
-        <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto sm:mx-0">
+        <p className="text-sm sm:text-base lg:text-lg text-center text-gray-600  mx-auto sm:mx-0">
           We craft data driven marketing strategies that build brands and boost growth.
 From social media to SEO, every campaign is tailored to your audience.
 Design, content, and performance

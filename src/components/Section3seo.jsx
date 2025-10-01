@@ -7,24 +7,24 @@ const Slider = () => {
 
   const slides = [
     {
-      image: 'https://via.placeholder.com/1000x500/800080/FFFFFF?text=Slide+1', // Replace with your image
-      title: 'Microsoft scales cloud at the speed of AI',
+      image: '/Images/seos11.jpg', // Replace with your image
+      title: 'SEO That Accelerates Growth at the Speed of Search',
       description:
-        'The cloud services leader is reinventing its supply chain to meet surging AI demand—doubling data center capacity while boosting speed, resilience and sustainability. Centralized data and digital twin-powered control towers are enabling smarter decisions and unlocking $100M in savings across global operations.',
+        'Leading SEO strategies are transforming how businesses attract, engage, and convert customers online—boosting traffic, rankings, and ROI. Data-driven insights, content optimization, and technical SEO enhancements empower smarter decisions while unlocking measurable growth and higher visibility across search engines worldwide.',
       link: '#',
     },
     {
-      image: 'https://via.placeholder.com/1000x500/0000FF/FFFFFF?text=Slide+2', // Replace with your image
-      title: 'Another exciting title for Slide 2',
+      image: '/Images/seos12.jpg', // Replace with your image
+      title: 'Master Search Visibility and Drive Real Business Results',
       description:
-        'This is the description for the second slide, showcasing some other cool features or information. It is designed to be just as engaging as the first one.',
+        'Advanced SEO strategies are helping brands dominate search engines, attract the right audience, and convert traffic into loyal customers. With technical optimization, content excellence, and data-driven insights, we deliver measurable growth, higher engagement, and sustainable online success for businesses worldwide.',
       link: '#',
     },
     {
-      image: 'https://via.placeholder.com/1000x500/FF0000/FFFFFF?text=Slide+3', // Replace with your image
-      title: 'Slide 3: Innovation in Action',
+      image: '/Images/seos13.jpg', // Replace with your image
+      title: 'Unlock Organic Growth That Scales With Your Business',
       description:
-        'Discover how our latest innovations are transforming industries and empowering businesses to achieve more. Learn about our commitment to excellence.',
+        'Our SEO strategies drive higher rankings, more traffic, and measurable business results. By combining keyword research, content optimization, and technical SEO, we empower brands to make smarter decisions, engage audiences effectively, and achieve sustainable growth online.',
       link: '#',
     },
   ];
@@ -109,22 +109,7 @@ const Slider = () => {
           </svg>
         </button>
       </div>
-
-      {/* Play/Pause Button (optional, as seen in the original image's bottom left) */}
-      <button className="absolute bottom-4 left-4 p-3 rounded-full bg-gray-700 text-white hover:bg-gray-600 focus:outline-none">
-        <svg
-          className="w-5 h-5"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-            clipRule="evenodd"
-          ></path>
-        </svg>
-      </button>
+      
     </div>
   );
 };

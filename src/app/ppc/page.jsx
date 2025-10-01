@@ -5,6 +5,11 @@ import Heroppc from "@/components/Heroppc";
 import QuoteHero from "@/components/QuoteHero";
 import Section6ppc from "@/components/Section6ppc";
 import Section3ppc from "@/components/Section3ppc";
+import Section7ppc from "@/components/Section7ppc";
+import Section8ppc from "@/components/Section8ppc";
+import Section10ppc from "@/components/Section10ppc";
+import Section12ppc from "@/components/Section12ppc";
+
 
 export default function page() {
   return (
@@ -14,11 +19,18 @@ export default function page() {
 
     <QuoteHero
         title="We provide personalised solutions that are tailored to the unique needs of each of our clients."
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Grow your brand with powerful SEO strategies designed to boost visibility, attract customers, and turn online searches into lasting business success."
       />
+
+      <Section3ppc />
     
+    <Section8ppc />
+     
     <Section6ppc />
-    <Section3ppc />
+  
+     <Section7ppc />
+     <Section10ppc />
+     <Section12ppc />
 
     <Footer/>
     </div>

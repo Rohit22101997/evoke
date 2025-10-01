@@ -1,46 +1,53 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect } from "react";
 
-const Logoslider = () => {
-  const logos = [
-     "/logo/logo1.png",
-    "/logo/logo1.png",
-     "/logo/logo1.png",
-    "/logo/logo1.png",
-    "/logo/logo1.png",
-    "/logo/logo1.png",
-  ];
-
-  // Duplicate for infinite loop
-  const sliderLogos = [...logos, ...logos];
+export default function LogoSlider() {
+  useEffect(() => {
+    // Duplicate slide for infinite loop
+    const slide = document.querySelector(".logos-slide");
+    if (slide && slide.parentElement?.children.length === 1) {
+      const copy = slide.cloneNode(true);
+      slide.parentElement.appendChild(copy);
+    }
+  }, []);
 
   return (
-    <div className="slider relative w-full max-w-6xl h-[100px] overflow-hidden bg-white shadow-lg mx-auto">
-      {/* Left gradient */}
-      <div className="absolute left-0 top-0 h-full w-[200px] bg-gradient-to-r from-white to-transparent z-10" />
-      {/* Right gradient */}
-      <div className="absolute right-0 top-0 h-full w-[200px] bg-gradient-to-l from-white to-transparent z-10" />
+    <div className="relative overflow-hidden py-12 bg-white whitespace-nowrap">
+      {/* Gradient Left */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-l from-transparent to-white z-10"></div>
 
-      {/* Slide track */}
-      <div className="slide-track flex">
-        {sliderLogos.map((src, i) => (
-          <div
-            key={i}
-            className="slide w-[250px] h-[100px] flex items-center justify-center"
-          >
-            <Image
-              src={src}
-              alt={`logo-${i}`}
-              width={250}
-              height={100}
-              className="object-contain"
-            />
-          </div>
-        ))}
+      {/* Logos row */}
+      <div
+        className="logos-slide inline-block"
+        style={{
+          animation: "slide 35s linear infinite",
+        }}
+      >
+        <img src="/logo/logo1.png" className="h-12 mx-10 inline-block" />
+        <img src="/logos/barstool-store.svg" className="h-12 mx-10 inline-block" />
+        <img src="/logos/budweiser.svg" className="h-12 mx-10 inline-block" />
+        <img src="/logos/buzzfeed.svg" className="h-12 mx-10 inline-block" />
+        <img src="/logos/forbes.svg" className="h-12 mx-10 inline-block" />
+        <img src="/logos/macys.svg" className="h-12 mx-10 inline-block" />
+        <img src="/logos/menshealth.svg" className="h-12 mx-10 inline-block" />
+        <img src="/logos/mrbeast.svg" className="h-12 mx-10 inline-block" />
       </div>
+
+      {/* Gradient Right */}
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-r from-transparent to-white z-10"></div>
+
+      {/* Inline keyframes for Tailwind-free animation */}
+      <style jsx>{`
+        @keyframes slide {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
     </div>
   );
-};
-
-export default Logoslider;
+}

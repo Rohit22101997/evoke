@@ -40,7 +40,7 @@ export default function Navbar() {
               <ChevronDown className="w-4 h-4" />
             </button>
             {activeDropdown === "what-we-do" && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-black rounded-md shadow-lg py-2 z-50">
+              <div className="absolute top-full  left-0 mt-2 w-48 bg-black rounded-md shadow-lg py-2 z-50">
                 <Link href="/seo" className="block px-4 py-2 hover:bg-gray-900">
                   Search Engine Optimization
                 </Link>
@@ -179,7 +179,7 @@ export default function Navbar() {
             <ChevronDown className="w-4 h-4" />
           </button>
           {activeDropdown === "mobile-services" && (
-            <div className="ml-4 space-y-2">
+            <div className="ml-4 flex flex-col gap-2 ">
               <Link href="/seo">Search Engine Optimization</Link>
               <Link href="/ppc">Advertisement</Link>
               <Link href="/smm">Social Media Marketing</Link>
@@ -195,7 +195,7 @@ export default function Navbar() {
             <ChevronDown className="w-4 h-4" />
           </button>
           {activeDropdown === "mobile-design" && (
-            <div className="ml-4 space-y-2">
+            <div className="ml-4  flex flex-col gap-2">
               <Link href="/ud">UX/UI Design</Link>
               <Link href="/gd">Graphic Designs</Link>
               <Link href="/vd">Video Editing</Link>
@@ -215,7 +215,7 @@ export default function Navbar() {
             <ChevronDown className="w-4 h-4" />
           </button>
           {activeDropdown === "mobile-who" && (
-            <div className="ml-4 space-y-2">
+            <div className="ml-4 flex flex-col gap-2">
               <Link href="/aboutus">About Us</Link>
               <Link href="/team">Team</Link>
               <Link href="/history">History</Link>

@@ -12,8 +12,7 @@ export default function UxProcess() {
         <header className="space-y-4 md:space-y-6">
           <p className="text-xs font-medium uppercase tracking-[0.35em] text-white/60">Process in focus</p>
           <h1 className="text-pretty text-2xl font-semibold leading-tight md:text-3xl lg:text-[2.5rem]">
-            We believe in a holistic and user-centric UX/UI design approach. Our process is meticulously crafted to
-            deliver exceptional digital experiences that resonate with your audience and drive success.
+            We implement data-driven marketing solutions that maximize reach and ROI. Our approach ensures consistent growth and sustainable business success.
           </h1>
         </header>
 

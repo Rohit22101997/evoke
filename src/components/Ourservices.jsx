@@ -7,7 +7,7 @@ const carouselData = [
   {
     id: "1",
     number: "01",
-    title: "B2B Company",
+    title: "B2B And B2C Company",
     image: "/Images/os1.jpg",
     tags: ["Experience & Network", "Service Companies", "Clients"],
   },
@@ -43,7 +43,7 @@ export default function SpecializationCarousel() {
   }
 
   return (
-    <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 mx-auto">
+    <div className="w-full max-w-8xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
         {/* Left Sidebar */}
         <div className="lg:col-span-4 space-y-4 sm:space-y-6 text-center lg:text-left">

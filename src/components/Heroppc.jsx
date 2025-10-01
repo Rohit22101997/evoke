@@ -29,12 +29,12 @@ export default function Hero() {
 
         <div className="mt-8 max-w-3xl">
           <h1 className="text-pretty font-sans text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            {"We’re a finance and consulting company based in Manhattan, New York."}
+            {"Building Brand Legacies Through Creativity, Strategy, and Innovation."}
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-white">
+          <p className="mt-6 max-w-4xl text-base leading-relaxed text-white">
             {
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar."
+              "Turning Ideas Into Immersive Experiences"
             }
           </p>
 

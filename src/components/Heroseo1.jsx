@@ -29,11 +29,11 @@ export default function Hero() {
           <div className="h-1 w-28 bg-brand ml-auto" /> {/* Line aligned right */}
 
           <h1 className="mt-8 text-pretty font-sans text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            We’re a finance and consulting company based in Manhattan, New York.
+            Elevating your brand online with data driven SEO excellence.
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-white ml-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.
+            Smarter SEO strategies that turn clicks into loyal customers, driving visibility, engagement, and long-term growth for your business online.
           </p>
 
           <div className="mt-8 flex justify-end">
@@ -41,7 +41,7 @@ export default function Hero() {
               href="#book-appointment"
               className="inline-flex items-center justify-center rounded-md border border-orange-600 bg-orange-600 px-6 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-orange-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
             >
-              Book Appointment
+              <b> Start Growing Today</b>
             </a>
           </div>
         </div>

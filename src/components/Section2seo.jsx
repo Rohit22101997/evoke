@@ -2,50 +2,50 @@ import Image from "next/image"
 
 const cards = [
   {
-    title: "Card 1",
+    title: "Technical SEO",
     description:
       "This is a longer description for Card 1. It contains more text to demonstrate the expanding effect when hovering over the card. You'll see the full content overlaying the image without causing any layout shifts. The card maintains its original size, but the content expands upwards.",
-    image: "/Images/seosection2.jpg?height=200&width=400",
+    image: "/Images/seoc1.jpg?height=200&width=400",
   },
   {
-    title: "Card 2",
+    title: "Keyword Strategy",
     description:
-      "Card 2 also has a detailed description. When you hover over this card, you'll be able to read all of this text without disturbing the layout of other cards on the page. This demonstrates how we can show more content by overlaying it on top of the image.",
-    image: "/placeholder.svg?height=200&width=400",
+      "We focuses on researching, analyzing, and selecting the right keywords to target high-value audiences. The content explains how short-tail and long-tail keywords work together to drive qualified traffic, improve visibility, and boost conversions.",
+    image: "/Images/seoc2.jpg?height=200&width=400",
   },
   {
-    title: "Card 3",
+    title: "Content Optimization",
     description:
       "Here's the expansive content for Card 3. This text is initially hidden but becomes fully visible on hover, showcasing the smooth transition effect we've implemented. The description grows upwards, covering part of the image.",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/Images/seoc3.jpg?height=200&width=400",
   },
   {
-    title: "Card 4",
+    title: "On-Page SEO Techniques",
     description:
-      "Card 4 joins the group with its own lengthy description. Hover to reveal the full text and observe how it doesn't affect the positioning of neighboring cards. The content expands within the card, maintaining the overall grid layout.",
-    image: "/placeholder.svg?height=200&width=400",
+      " We manage to optimizing meta tags, headings, URLs, and internal links to improve search rankings. The content highlights best practices for page structure, content relevance, and user experience, ensuring your website performs better in search engines.",
+    image: "/Images/seoc4.jpg?height=200&width=400",
   },
   {
-    title: "Card 5",
+    title: "SEO Analytics & Performance Tracking",
     description:
       "The fifth card in our grid also features an expanding description. This demonstrates how the effect works consistently across multiple items. Notice how the card's external dimensions remain unchanged as you hover.",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/Images/seoc5.jpg?height=200&width=400",
   },
   {
-    title: "Card 6",
+    title: "Local SEO & Google My Business",
     description:
       "Last but not least, Card 6 rounds out our grid. Its description, like the others, expands smoothly on hover without disrupting the overall layout. This consistent behavior across all cards creates a polished user experience.",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/Images/seoc6.jpg?height=200&width=400",
   },
 ]
 
 export default function Home() {
   return (
     <main className="container mx-auto p-10 py-20">
-      <h1 className="text-3xl font-bold mb-6">Expanding Cards Grid</h1>
+      <h1 className="text-3xl py-10 font-bold mb-6 ">Search Engine Optimization Services</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cards.map((card, index) => (
-          <div key={index} className="relative overflow-hidden h-[300px] rounded-lg shadow-md group">
+          <div key={index} className="relative overflow-hidden h-[300px] shadow-md group">
             <div className="relative h-full">
               <Image src={card.image || "/placeholder.svg"} alt={card.title} layout="fill" objectFit="cover" />
             </div>

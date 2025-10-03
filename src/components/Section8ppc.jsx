@@ -3,7 +3,7 @@ import React from 'react';
 
 const CallToActionSection = () => {
   return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-screen">
+    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center ">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-black leading-tight mb-6">
           Innovative <span className="text-orange-500">Strategies</span> <br className="hidden sm:inline" />

@@ -16,7 +16,7 @@ const StrategicServicesSection = () => {
             <p className="text-lg text-gray-700 mb-6">
               At Eclectica, we combine creativity with strategy to deliver exceptional results.
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
+            <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
               Learn More &rarr;
             </button>
           </div>

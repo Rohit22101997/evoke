@@ -8,7 +8,7 @@ const steps = [
 export default function UxProcess() {
   return (
     <section className="bg-black text-white">
-      <div className="mx-auto flex max-w-5xl flex-col gap-12 px-6 py-16 md:gap-16 md:px-10 lg:px-16">
+      <div className="mx-auto flex max-w-8xl flex-col gap-12 px-6 py-16 md:gap-16 md:px-10 lg:px-16">
         <header className="space-y-4 md:space-y-6">
           <p className="text-xs font-medium uppercase tracking-[0.35em] text-white/60">Process in focus</p>
           <h1 className="text-pretty text-2xl font-semibold leading-tight md:text-3xl lg:text-[2.5rem]">

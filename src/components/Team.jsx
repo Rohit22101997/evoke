@@ -80,7 +80,7 @@ const TeamCarousel = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 overflow-hidden relative">
       {/* Title */}
-      <h1 className="text-8xl font-black uppercase tracking-tighter absolute top-12 left-1/2 transform -translate-x-1/2 pointer-events-none whitespace-nowrap font-sans bg-gradient-to-b from-blue-900/35 to-transparent bg-clip-text text-transparent">
+      <h1 className="text-8xl font-black uppercase tracking-tighter absolute top-12 left-1/2 transform -translate-x-1/2 pointer-events-none whitespace-nowrap font-sans bg-gradient-to-b from-orange-500/35 to-transparent bg-clip-text text-transparent">
         OUR TEAM
       </h1>
 
@@ -88,7 +88,7 @@ const TeamCarousel = () => {
       <div className="w-full max-w-6xl h-[450px] relative perspective-1000 mt-20">
         {/* Left Arrow */}
         <button 
-          className="absolute top-1/2 -translate-y-1/2 left-5 bg-blue-900/60 text-white w-10 h-10 rounded-full flex items-center justify-center cursor-pointer z-20 transition-all duration-300 text-xl pb-1 hover:bg-black/80 hover:scale-110"
+          className="absolute top-1/2 -translate-y-1/2 left-5 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center cursor-pointer z-20 transition-all duration-300 text-xl pb-1 hover:bg-orange-500 hover:scale-110"
           onClick={() => updateCarousel(currentIndex - 1)}
         >
           ‹
@@ -140,7 +140,7 @@ const TeamCarousel = () => {
 
         {/* Right Arrow */}
         <button 
-          className="absolute top-1/2 -translate-y-1/2 right-5 bg-blue-900/60 text-white w-10 h-10 rounded-full flex items-center justify-center cursor-pointer z-20 transition-all duration-300 text-xl pb-1 hover:bg-black/80 hover:scale-110"
+          className="absolute top-1/2 -translate-y-1/2 right-5 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center cursor-pointer z-20 transition-all duration-300 text-xl pb-1 hover:bg-orange-500 hover:scale-110"
           onClick={() => updateCarousel(currentIndex + 1)}
         >
           ›
@@ -149,10 +149,10 @@ const TeamCarousel = () => {
 
       {/* Member Info */}
       <div className="text-center mt-10 transition-all duration-500 ease-out">
-        <h2 className="text-4xl font-bold text-blue-900 mb-2 relative inline-block">
+        <h2 className="text-4xl font-bold text-black mb-2 relative inline-block">
           {teamMembers[currentIndex].name}
-          <span className="absolute top-full -left-28 w-24 h-0.5 bg-blue-900"></span>
-          <span className="absolute top-full -right-28 w-24 h-0.5 bg-blue-900"></span>
+          <span className="absolute top-full -left-28 w-24 h-0.5 bg-orange-500"></span>
+          <span className="absolute top-full -right-28 w-24 h-0.5 bg-orange-500"></span>
         </h2>
         <p className="text-xl text-gray-500 font-medium opacity-80 uppercase tracking-wider py-2 -mt-3 relative">
           {teamMembers[currentIndex].role}
@@ -166,8 +166,8 @@ const TeamCarousel = () => {
             key={index}
             className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
               index === currentIndex 
-                ? 'bg-blue-900 scale-120' 
-                : 'bg-blue-900/20'
+                ? 'bg-orange-500 scale-120' 
+                : 'bg-orange-500/20'
             }`}
             onClick={() => updateCarousel(index)}
           />

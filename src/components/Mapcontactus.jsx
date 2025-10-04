@@ -1,16 +1,16 @@
 import React from 'react';
 
 const YOUR_ADDRESS = {
-  street: "123 Main Street",
-  city: "Anytown, CA 90210",
-  phone: "(555) 555-1212",
-  email: "contact@example.com",
+  street: "Sector-49",
+  city: "Gurugram",
+  phone: "+91-9045100349",
+  email: "baniwalrinku22@gmail.com",
 };
 
 // **IMPORTANT:** Replace the 'YOUR_EMBED_MAP_URL' string below 
 // with the actual 'src' URL from the Google Maps iframe code you copied.
 
-const YOUR_EMBED_MAP_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.748301548171!2d-118.35858632349195!3d34.05836867315579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b97f0a996f5b%3A0xf60d2e85a6a666e1!2sGrauman's%20Chinese%20Theatre!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin";
+const YOUR_EMBED_MAP_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2039.6976856082264!2d77.03719001323385!3d28.423985552943265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2358895054f3%3A0x6b4458d34346146c!2sSector%2049%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1728000000000!5m2!1sen!2sin";
 
 export default function MapAddress() {
   return (
@@ -39,7 +39,7 @@ export default function MapAddress() {
           </h2>
           
           <div className="mb-4">
-            <h3 className="text-lg font-semibold text-indigo-600 mb-1">
+            <h3 className="text-lg font-semibold text-orange-500 mb-1">
               Our Address
             </h3>
             <p className="text-gray-600">{YOUR_ADDRESS.street}</p>
@@ -47,7 +47,7 @@ export default function MapAddress() {
           </div>
 
           <div className="mb-4">
-            <h3 className="text-lg font-semibold text-indigo-600 mb-1">
+            <h3 className="text-lg font-semibold text-orange-500 mb-1">
               Phone
             </h3>
             <p className="text-gray-600">
@@ -58,11 +58,11 @@ export default function MapAddress() {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold text-indigo-600 mb-1">
+            <h3 className="text-lg font-semibold text-orange-500 mb-1">
               Email
             </h3>
             <p className="text-gray-600">
-              <a href={`mailto:${YOUR_ADDRESS.email}`} className="hover:text-indigo-800">
+              <a href={`mailto:${YOUR_ADDRESS.email}`} className="hover:text-orange-500">
                 {YOUR_ADDRESS.email}
               </a>
             </p>

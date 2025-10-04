@@ -1,103 +1,121 @@
-"use client"
+"use client";
+import { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
 
-import { motion } from "motion/react"
-import { useEffect, useId, useState } from "react"
-import { cn } from "@/lib/utils"
+export default function CaseStudiesGrid() {
+  const [hoveredCard, setHoveredCard] = useState(null);
 
-export default function AnimatedBeam({
-  className,
-  containerRef,
-  fromRef,
-  toRef,
-  curvature = 0,
-  reverse = false,
-  duration = Math.random() * 3 + 4,
-  delay = 0,
-  pathColor = "gray",
-  pathWidth = 2,
-  pathOpacity = 0.2,
-  gradientStartColor = "#ffaa40",
-  gradientStopColor = "#9c40ff",
-  startXOffset = 0,
-  startYOffset = 0,
-  endXOffset = 0,
-  endYOffset = 0,
-}) {
-  const id = useId()
-  const [pathD, setPathD] = useState("")
-  const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 })
-
-  const gradientCoordinates = reverse
-    ? { x1: ["90%", "-10%"], x2: ["100%", "0%"], y1: ["0%", "0%"], y2: ["0%", "0%"] }
-    : { x1: ["10%", "110%"], x2: ["0%", "100%"], y1: ["0%", "0%"], y2: ["0%", "0%"] }
-
-  useEffect(() => {
-    const updatePath = () => {
-      if (containerRef.current && fromRef.current && toRef.current) {
-        const containerRect = containerRef.current.getBoundingClientRect()
-        const rectA = fromRef.current.getBoundingClientRect()
-        const rectB = toRef.current.getBoundingClientRect()
-
-        const svgWidth = containerRect.width
-        const svgHeight = containerRect.height
-        setSvgDimensions({ width: svgWidth, height: svgHeight })
-
-        const startX = rectA.left - containerRect.left + rectA.width / 2 + startXOffset
-        const startY = rectA.top - containerRect.top + rectA.height / 2 + startYOffset
-        const endX = rectB.left - containerRect.left + rectB.width / 2 + endXOffset
-        const endY = rectB.top - containerRect.top + rectB.height / 2 + endYOffset
-
-        const controlY = startY - curvature
-        const d = `M ${startX},${startY} Q ${(startX + endX) / 2},${controlY} ${endX},${endY}`
-        setPathD(d)
-      }
+  const caseStudies = [
+    {
+      id: 1,
+      image: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&h=600&fit=crop',
+      title: 'Efficiency and Excellence: Total IT Global\'s Strategic Expertise Transforms Multinational Telecom Giant\'s Operations Across 70+ Sites',
+      category: 'Telecommunications'
+    },
+    {
+      id: 2,
+      image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&h=600&fit=crop',
+      title: 'Total IT Global Resource Expertise and Priority-driven Service for International Confectionery Company',
+      category: 'Manufacturing'
+    },
+    {
+      id: 3,
+      image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop',
+      title: 'Rapid Transition & Flexible Support: How Total IT Global Tackled Complex Challenges for an Industrial Tech Giant',
+      category: 'Industrial Technology'
+    },
+    {
+      id: 4,
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
+      title: 'Global Pharmaceutical Company Achieves Safety and Compliance Excellence with Total IT Global\'s Dedicated Support',
+      category: 'Healthcare'
+    },
+    {
+      id: 5,
+      image: 'https://images.unsplash.com/photo-1586864387634-5a5d0a9d3f2e?w=800&h=600&fit=crop',
+      title: 'New Zealand Dairy uses Total IT Global\'s Expertise in Predictive Wireless Site Surveys to assess its Wireless Infrastructure',
+      category: 'Agriculture'
+    },
+    {
+      id: 6,
+      image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop',
+      title: 'Global FMCG MNC Partners with Total IT Global for Seamless Onsite IT Support and Data Security Solutions',
+      category: 'Consumer Goods'
     }
-
-    const resizeObserver = new ResizeObserver(() => updatePath())
-
-    if (containerRef.current) resizeObserver.observe(containerRef.current)
-    updatePath()
-
-    return () => resizeObserver.disconnect()
-  }, [containerRef, fromRef, toRef, curvature, startXOffset, startYOffset, endXOffset, endYOffset])
+  ];
 
   return (
-    <svg
-      fill="none"
-      width={svgDimensions.width}
-      height={svgDimensions.height}
-      xmlns="http://www.w3.org/2000/svg"
-      className={cn("pointer-events-none absolute left-0 top-0 transform-gpu stroke-2", className)}
-      viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}
-    >
-      <path d={pathD} stroke={pathColor} strokeWidth={pathWidth} strokeOpacity={pathOpacity} strokeLinecap="round" />
-      <path d={pathD} strokeWidth={pathWidth} stroke={`url(#${id})`} strokeOpacity="1" strokeLinecap="round" />
-      <defs>
-        <motion.linearGradient
-          className="transform-gpu"
-          id={id}
-          gradientUnits="userSpaceOnUse"
-          initial={{ x1: "0%", x2: "0%", y1: "0%", y2: "0%" }}
-          animate={{
-            x1: gradientCoordinates.x1,
-            x2: gradientCoordinates.x2,
-            y1: gradientCoordinates.y1,
-            y2: gradientCoordinates.y2,
-          }}
-          transition={{
-            delay,
-            duration,
-            ease: [0.16, 1, 0.3, 1],
-            repeat: Number.POSITIVE_INFINITY,
-            repeatDelay: 0,
-          }}
-        >
-          <stop stopColor={gradientStartColor} stopOpacity="0" />
-          <stop stopColor={gradientStartColor} />
-          <stop offset="32.5%" stopColor={gradientStopColor} />
-          <stop offset="100%" stopColor={gradientStopColor} stopOpacity="0" />
-        </motion.linearGradient>
-      </defs>
-    </svg>
-  )
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      {/* Header Section */}
+      <div className="max-w-7xl mx-auto mb-12">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-orange-500 mb-4">
+            <b>Success Stories</b>
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Discover how Total IT Global has helped businesses across industries achieve their technology goals
+          </p>
+        </div>
+      </div>
+
+      {/* Case Studies Grid */}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {caseStudies.map((study) => (
+            <div
+              key={study.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 cursor-pointer"
+              onMouseEnter={() => setHoveredCard(study.id)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              {/* Image Container */}
+              <div className="relative h-64 overflow-hidden bg-gray-200">
+                <img
+                  src={study.image}
+                  alt={study.title}
+                  className="w-full h-full object-cover transition-transform duration-500"
+                  style={{
+                    transform: hoveredCard === study.id ? 'scale(1.1)' : 'scale(1)'
+                  }}
+                />
+                {/* Category Badge */}
+                <div className="absolute top-4 left-4">
+                  <span className="bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    {study.category}
+                  </span>
+                </div>
+              </div>
+
+              {/* Content Container */}
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4 line-clamp-3 leading-relaxed">
+                  {study.title}
+                </h3>
+
+                {/* Read More Link */}
+                <div className="flex items-center text-orange-500 font-medium group">
+                  <span className="transition-all duration-300">
+                    Read More
+                  </span>
+                  <ArrowRight 
+                    className="ml-2 h-4 w-4 transition-transform duration-300"
+                    style={{
+                      transform: hoveredCard === study.id ? 'translateX(5px)' : 'translateX(0)'
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Load More Button */}
+      <div className="max-w-7xl mx-auto mt-12 text-center">
+        <button className="px-8 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-black transition-colors duration-300 shadow-md hover:shadow-lg">
+          Load More Case Studies
+        </button>
+      </div>
+    </div>
+  );
 }

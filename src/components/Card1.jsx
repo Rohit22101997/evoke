@@ -13,7 +13,7 @@ export default function SeoRevenueBenefits() {
           />
         </svg>
       ),
-      iconBg: "bg-blue-500",
+      iconBg: "bg-orange-500",
       title: "Generate Leads",
       description: "Attract qualified prospects to your site with targeted SEO strategies",
     },
@@ -25,7 +25,7 @@ export default function SeoRevenueBenefits() {
           <circle cx="15" cy="12" r="1" />
         </svg>
       ),
-      iconBg: "bg-green-500",
+      iconBg: "bg-orange-500",
       title: "Increase Sales",
       description: "Drive more conversions with optimized search visibility and user experience.",
     },
@@ -69,7 +69,7 @@ export default function SeoRevenueBenefits() {
           />
         </svg>
       ),
-      iconBg: "bg-blue-500",
+      iconBg: "bg-orange-500",
       title: "Boost Brand Visibility",
       description: "Increase your brand's presence with better rankings and more traffic.",
     },
@@ -81,7 +81,7 @@ export default function SeoRevenueBenefits() {
           <path d="M15 22L14 18L18 18L15 22Z" />
         </svg>
       ),
-      iconBg: "bg-green-500",
+      iconBg: "bg-orange-500",
       title: "Improve Engagement",
       description: "Enhance customer interaction with tailored content and improved site experience.",
     },

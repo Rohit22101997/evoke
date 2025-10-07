@@ -10,6 +10,7 @@ import Ourser from "@/components/Ourser"
 import Counter from "@/components/Counter";
 import Gradienttext from "@/components/Gradienttext";
 import MarqueeAnimation from "@/components/MarqueeAnimation"
+import Section2landing from "@/components/Section2landing"
 
 
 
@@ -27,6 +28,7 @@ export default function Home() {
         ctaHref="/contactus" />
        
        <Ourservices/>
+       <Section2landing />
        <Ourser/>
        <MarqueeAnimation />
        <Gradienttext />

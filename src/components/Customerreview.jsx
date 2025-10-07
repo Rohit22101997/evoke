@@ -10,24 +10,24 @@ const reviews = [
     name: "Karan",
     timeAgo: "1 week ago",
     rating: 5,
-    text: "My buying experience is so nice, and received me very politely. Riding experience is also very good. Very good performance. I never experienced such a kind of performance. Very good service.",
-    avatar: "/Images/cr1.png",
+    text: "I came across a brand online through one of their campaigns and honestly, it was the ad that caught my attention. The visuals were relatable, and the message felt personal. When I visited the website, it was smooth, informative, and easy to trust. You can tell the marketing team behind it knows how to connect emotionally while keeping things simple and authentic.",
+    avatar: "/Images/cr1.jpg",
   },
   {
     id: 2,
-    name: "Catherine",
+    name: " Abhinav Singh",
     timeAgo: "10 days ago",
     rating: 5,
-    text: "I love my e-bike and the customer service is excellent. They respond in a timely manner with loads of information about e-bikes, accessories and maintenance information.",
-    avatar: "/Images/cr2.png",
+    text: "We’ve worked with multiple agencies over the years, but this team stands out for their professionalism and consistency. They refreshed our digital presence with modern branding, targeted ad campaigns, and strong content strategy. Our website traffic increased by 65%, and our conversion rate improved notably. What impressed me most was their clear communication and transparency. we always knew where every rupee was going and what it was bringing back.",
+    avatar: "/Images/cr2.jpg",
   },
   {
     id: 3,
-    name: "Peter",
+    name: "Dinesh Sharma",
     timeAgo: "2 weeks ago",
     rating: 5,
-    text: "Visited to EO store. Product particularly welds, looks great. My wife and I took small test ride in the parking lot area. We bought one bike with customization after we went over all the options and satisfied.",
-    avatar: "/Images/cr3.png",
+    text: "We sell consumer products, and what impressed me most was their understanding of the Indian audience. The campaigns felt local yet modern. They handled everything from influencer collaborations to festive ad planning. It’s rare to find a team that blends creativity with cultural insight so well.",
+    avatar: "/Images/cr3.jpg",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function CustomerReviews() {
     return Array.from({ length: 5 }, (_, i) => (
       <svg
         key={i}
-        className="w-4 h-4 text-green-500 fill-current"
+        className="w-4 h-4 text-orange-500 fill-current"
         viewBox="0 0 20 20"
       >
         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -65,9 +65,9 @@ export default function CustomerReviews() {
       {/* Header Section */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-balance">
-          Read reviews,
+          Read Reviews
           <br />
-          ride with confidence.
+          of Our High Value Clients
         </h1>
 
         {/* Trustpilot Rating */}
@@ -75,14 +75,14 @@ export default function CustomerReviews() {
           <div className="flex items-center gap-2">
             <span className="text-lg font-semibold text-gray-900">4.2/5</span>
             <svg
-              className="w-6 h-6 text-green-500 fill-current"
+              className="w-6 h-6 text-orange-500 fill-current"
               viewBox="0 0 20 20"
             >
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
-            <span className="text-lg font-bold text-green-600">Trustpilot</span>
+            
           </div>
-          <span className="text-gray-600">Based on 5210 reviews</span>
+          <span className="text-gray-600">Top of 1K+ Reviews</span>
         </div>
       </div>
 
@@ -98,7 +98,7 @@ export default function CustomerReviews() {
 
             <div>
               <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 text-balance">
-                What our customers are saying
+                What Our Client are Saying
               </h2>
 
               {/* Navigation Arrows */}

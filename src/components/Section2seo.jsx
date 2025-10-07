@@ -4,7 +4,7 @@ const cards = [
   {
     title: "Technical SEO",
     description:
-      "This is a longer description for Card 1. It contains more text to demonstrate the expanding effect when hovering over the card. You'll see the full content overlaying the image without causing any layout shifts. The card maintains its original size, but the content expands upwards.",
+      "Optimize your website’s foundation for peak performance. Our technical SEO services enhance site speed, mobile responsiveness, crawlability, and indexing to ensure search engines easily understand and rank your pages. From fixing broken links to improving site architecture, we make your website technically flawless and search-engine ready.",
     image: "/Images/seoc1.jpg?height=200&width=400",
   },
   {
@@ -16,7 +16,7 @@ const cards = [
   {
     title: "Content Optimization",
     description:
-      "Here's the expansive content for Card 3. This text is initially hidden but becomes fully visible on hover, showcasing the smooth transition effect we've implemented. The description grows upwards, covering part of the image.",
+      "Enhance your website’s impact with strategically optimized content. We refine your existing pages using targeted keywords, engaging copy, and SEO best practices to boost visibility and user engagement. Our goal is to make every word count driving higher rankings, better readability, and stronger audience connections.",
     image: "/Images/seoc3.jpg?height=200&width=400",
   },
   {
@@ -28,13 +28,13 @@ const cards = [
   {
     title: "SEO Analytics & Performance Tracking",
     description:
-      "The fifth card in our grid also features an expanding description. This demonstrates how the effect works consistently across multiple items. Notice how the card's external dimensions remain unchanged as you hover.",
+      "Measure what matters with in-depth SEO analytics and tracking. We monitor keyword rankings, traffic sources, user behavior, and conversion metrics to evaluate campaign success. Our detailed reports provide clear insights, helping you make data-driven decisions and continuously improve your website’s search performance.",
     image: "/Images/seoc5.jpg?height=200&width=400",
   },
   {
     title: "Local SEO & Google My Business",
     description:
-      "Last but not least, Card 6 rounds out our grid. Its description, like the others, expands smoothly on hover without disrupting the overall layout. This consistent behavior across all cards creates a polished user experience.",
+      "Increase your brand’s visibility in local searches and on Google Maps. We optimize your Google My Business profile, local keywords, and citations to attract nearby customers. Our local SEO strategies help you stand out in your area, drive foot traffic, and boost calls and inquiries from your community.",
     image: "/Images/seoc6.jpg?height=200&width=400",
   },
 ]

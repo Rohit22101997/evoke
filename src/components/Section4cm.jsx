@@ -37,23 +37,23 @@ const IconDroplet = (props) => (
 export default function ServicesAdvantages() {
   const features = [
     {
-      title: 'Image synthesis',
-      description: 'AI image generators can synthesize new, unique images from scratch and providing best silutions.',
+      title: 'Unique Imagery',
+      description: 'Generate custom visuals instantly, distinguishing your brand from competitors.',
       icon: IconGallery,
     },
     {
-      title: 'Style transfer',
-      description: 'AI image generators can transfer the style of one image to another image style.',
+      title: 'Brand Consistency',
+      description: 'Apply unified styles across all assets for strong brand recall.',
       icon: IconBrush,
     },
     {
-      title: 'Super resolution',
-      description: 'AI image generators can enhance the resolution and detail of low-resolution images.',
+      title: 'Quality Assurance',
+      description: 'Rescue low-resolution images, guaranteeing professional, crisp visuals always.',
       icon: IconLayers,
     },
     {
-      title: 'Inpainting and restoration',
-      description: 'AI image generators can automatically fill in missing or damaged parts of the image.',
+      title: 'Flawless Edits',
+      description: 'Automatically repair and refine images, ensuring quick, perfect final results.',
       icon: IconDroplet,
     },
   ];
@@ -63,10 +63,10 @@ export default function ServicesAdvantages() {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-12">
-          <p className="text-gray-500 text-sm mb-2">/ services /</p>
+          <p className="text-gray-500 text-sm mb-2">For Client Side </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight text-gray-900">
-            The unique selling points &<br />
-            advantages of our service
+            Elevate Your Content: <br />
+           Our AI-Powered Creative Advantage
           </h1>
         </div>
 
@@ -78,8 +78,8 @@ export default function ServicesAdvantages() {
               <p className="text-gray-700 text-base leading-relaxed mb-6">{feature.description}</p>
               <div className="flex-grow flex items-end">
                 {/* Icon for the feature */}
-                <div className="p-3 bg-gray-100 rounded-lg inline-flex">
-                  <feature.icon className="h-8 w-8 text-gray-700" />
+                <div className="p-3 bg-orange-500 rounded-lg inline-flex">
+                  <feature.icon className="h-8 w-8 text-gray-100" />
                 </div>
               </div>
             </div>

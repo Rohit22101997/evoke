@@ -6,20 +6,27 @@ const ShippingServices = () => {
   return (
     <section className="bg-black text-white py-16 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
-        <h3 className="text-sm uppercase text-gray-400 mb-2">Our Services</h3>
+        
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 leading-tight">
-          MANAGE YOUR PACKAGE <br />
-          FROM LOCAL TO <span className="text-orange-500">THE WORLD.</span>
+         MANAGE THE USER JOURNEY <br />
+          FROM COMPONENT TO  <span className="text-orange-500">GLOBAL EXPERIENCE</span>
         </h1>
         <p className="text-gray-300 text-lg mb-12 max-w-2xl">
-          Torre is a logistics provider of integrated freight solutions. Torre provides dedicated freight solutions
-          including Less Than Truck Load, Full Truck Load, Warehousing/Fulfillment, Drayage, and Parcel/Small Load.
+          Scale your product effortlessly by managing the design system, ensuring every local component translates into a consistent and accessible global experience.
         </p>
 
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="flex-1 min-w-0">
             {/* Image placeholder - you would replace this with an actual image component or <img> tag */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden flex items-center justify-center p-4 h-96">
+            <div
+      className="relative w-150 h-100  bg-gray-900 overflow-hidden bg-cover bg-center"
+      
+      style={{
+        backgroundImage:
+          "url('/Images/uds31.jpg')",
+      }}
+    >
+              
               {/* This is where you'd place your image. For now, a placeholder. */}
               {/* Example using a generated image: */}
               <div className="w-full h-full object-cover">
@@ -32,28 +39,40 @@ const ShippingServices = () => {
           <div className="flex-1 space-y-8">
             <div className="border-b border-gray-700 pb-6">
               <div className="flex justify-between items-center">
-                <h2 className="text-3xl font-semibold">Worldwide Shipping</h2>
+                <h2 className="text-3xl font-semibold">Consistency</h2>
                 <FaArrowRight className="text-orange-500 text-2xl" />
               </div>
               <p className="text-gray-400 mt-2 text-lg">
-                Not only an origin-city delivery, but TORRE also
-                serves inter-country delivery at an affordable cost and
-                also includes taxes and so on.
+                Design systems ensure global consistency, letting you manage reusable 
+                components from local development to a seamless, unified worldwide user experience.
               </p>
             </div>
 
             <div className="border-b border-gray-700 pb-6">
+              <div className="">
               <div className="flex justify-between items-center">
-                <h2 className="text-3xl font-semibold">Sea Shipping</h2>
-                <FaArrowDown className="text-gray-500 text-2xl" />
+                <h2 className="text-3xl font-semibold">Scalability</h2>
+                <FaArrowRight className="text-orange-500 text-2xl" />
               </div>
+              <p className="text-gray-400 mt-2 text-lg">
+                Scale your product effortlessly by managing the design system, 
+                ensuring every local component translates into a consistent 
+                and accessible global experience.
+              </p>
+            </div>
             </div>
 
             <div>
+              <div className="border-b border-gray-700 pb-6">
               <div className="flex justify-between items-center">
-                <h2 className="text-3xl font-semibold">Ground Shipping</h2>
-                <FaArrowDown className="text-gray-500 text-2xl" />
+                <h2 className="text-3xl font-semibold">Process</h2>
+                <FaArrowRight className="text-orange-500 text-2xl" />
               </div>
+              <p className="text-gray-400 mt-2 text-lg">
+                Manage the design process from the smallest component locally to delivering a robust,
+                cohesive, and effective user experience across the world.
+              </p>
+            </div>
             </div>
           </div>
         </div>

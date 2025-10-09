@@ -17,7 +17,7 @@ const HeroComponent = () => {
 
 
       {/* Main Content */}
-      <div className="relative z-20 flex items-center min-h-screen">
+      <div className="relative z-20 flex items-center py-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
@@ -45,10 +45,10 @@ const HeroComponent = () => {
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <button className="bg-orange-500 hover:bg-lime-300 text-black font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
+                Ready to Grow?
               </button>
               <button className="bg-white text-black font-semibold px-8 py-4 rounded-lg border-2 border-white hover:bg-transparent hover:text-white transition-all duration-300">
-  Learn More
+  See Our Portfolio
 </button>
             </div>
           </div>

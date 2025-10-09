@@ -7,6 +7,7 @@ import Section3ud from "@/components/Section3ud";
 import Section5ud from "@/components/Section5ud";
 import Section6ud from "@/components/Section6ud";
 import Section8ud from "@/components/Section8ud";
+import Section10ud from "@/components/Section10ud";
 import Heroud from "@/components/Heroud";
 
 export default function page() {
@@ -18,6 +19,7 @@ export default function page() {
     <Section5ud />
     <Section6ud />
     <Section8ud />
+    <Section10ud />
     <Section3ud />
     <Section2ud />
 

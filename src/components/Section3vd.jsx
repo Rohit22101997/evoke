@@ -4,20 +4,20 @@ const services = [
   {
     title: 'Editing',
     description:
-      'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur',
-    imageSrc: '/images/editing.jpg', // Replace with your image paths
+      'Transform raw clips into captivating stories with seamless transitions, dynamic effects, and professional polish.',
+    imageSrc: '/Images/vds31.jpg', // Replace with your image paths
   },
   {
     title: 'Color Correction',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur',
-    imageSrc: '/images/color-correction.jpg', // Replace with your image paths
+      'Enhance every frame with balanced tones, vibrant colors, and cinematic depth for a flawless visual experience.',
+    imageSrc: '/Images/vds32.png', // Replace with your image paths
   },
   {
     title: 'Sound Design',
     description:
-      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore',
-    imageSrc: '/images/sound-design.jpg', // Replace with your image paths
+      'Craft immersive audio experiences with crisp sound effects, clear dialogue, and balanced background music.',
+    imageSrc: '/Images/vds33.jpg', // Replace with your image paths
   },
 ];
 

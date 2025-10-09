@@ -4,44 +4,46 @@ const ProductGridSection = () => {
   const products = [
     {
       id: 1,
-      name: 'Orange Blox',
+      name: 'User Research',
       description:
-        'The image shows Beautiful model in a elegant classy way, an image of an elegant young woman that captures and merges.',
+        'Understand user needs and behaviors before designing any interface solution.',
       imageUrl:
-        'https://via.placeholder.com/600x400/1f2937/d1d5db?text=Orange+Blox',
+        '/Images/uds1.jpg',
       tag: 'View',
     },
     {
       id: 2,
-      name: 'Nova Scene',
+      name: 'Wireframing',
       description:
-        'The image shows Beautiful model in a elegant classy way, an image of an elegant young woman that captures and merges.',
+        'Sketch the basic structure and flow to define the interfaces hierarchy clearly',
       imageUrl:
-        'https://via.placeholder.com/600x400/1f2937/d1d5db?text=Nova+Scene',
+        '/Images/uds2.jpg',
       tag: 'View',
     },
     {
       id: 3,
-      name: 'Arched Pink',
+      name: 'Visual Hierarchy',
       description:
-        'The image shows Beautiful model in a elegant classy way, an image of an elegant young woman that captures and merges.',
+        'Guide users eyes using size, color, and contrast for easy scanning.',
       imageUrl:
-        'https://via.placeholder.com/600x400/1f2937/d1d5db?text=Arched+Pink',
+        '/Images/uds3.jpg',
       tag: 'View',
     },
     {
       id: 4,
-      name: 'Liquid',
+      name: 'Usability Testing',
       description:
-        'The image shows Beautiful model in a elegant classy way, an image of an elegant young woman that captures and merges.',
+        'Observe real users interacting with the design to identify pain points early.',
       imageUrl:
-        'https://via.placeholder.com/600x400/1f2937/d1d5db?text=Liquid',
+        '/Images/uds4.jpg',
       tag: 'View',
     },
   ];
 
   return (
-    <section className="bg-black text-white py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-black text-white py-16 px-4 sm:px-6 lg:px-2">
+      <h1 className="text-7xl py-20 font-bold  text-center">Our Strategy</h1>
+      
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
         {products.map((product) => (
           <div key={product.id} className="flex flex-col">
@@ -60,10 +62,10 @@ const ProductGridSection = () => {
             </p>
             {/* Tag/Button */}
             <div className="flex items-center space-x-3 mt-auto">
-              <span className="text-sm font-medium text-white px-4 py-2 bg-gray-800 rounded-full">
+              <span className="text-sm font-medium text-white px-4 py-2 bg-orange-500 rounded-full">
                 {product.tag}
               </span>
-              <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
+              
             </div>
           </div>
         ))}

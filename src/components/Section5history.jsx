@@ -25,14 +25,14 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group block p-2 h-full w-full"
+          className="relative group block px-9 py-5 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-orange-600/[0.8] block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -107,39 +107,39 @@ export const CardDescription = ({
 
 export const projects = [
   {
-    title: "Stripe",
+    title: "Founded with a Vision",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
+      "Evoke Digital was established to redefine the way brands connect with audiences worldwide. From the very beginning, our focus has been on combining creativity, strategy, and innovation to help businesses grow and make a meaningful impact in the digital space.",
     link: "https://stripe.com",
   },
   {
-    title: "Netflix",
+    title: "Early Milestones",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+      "In the initial years, Evoke Digital achieved significant milestones, building a strong foundation in creative marketing and digital strategy. Our early campaigns set the standard for innovation, delivering measurable results and earning the trust of clients across industries and regions.",
     link: "https://netflix.com",
   },
   {
-    title: "Google",
+    title: "Expanding Globally",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
+      "As demand grew, we expanded our presence to international markets, establishing offices and partnerships across key regions. This global footprint allows us to deliver localized strategies with worldwide impact, helping brands reach audiences everywhere while maintaining cultural relevance and effectiveness.",
     link: "https://google.com",
   },
   {
-    title: "Meta",
+    title: "Innovative Approach",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+      "Technology and data have always been at the core of our solutions. By integrating advanced analytics, AI, and creative thinking, Evoke Digital develops smarter marketing strategies that drive engagement, optimize performance, and ensure measurable business growth for clients globally.",
     link: "https://meta.com",
   },
   {
-    title: "Amazon",
+    title: "Creative Excellence",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+      "Creativity is the heart of everything we do. Over the years, our campaigns have been recognized for originality, impact, and effectiveness, helping clients build memorable brands, inspire audiences, and stand out in a competitive international market.",
     link: "https://amazon.com",
   },
   {
-    title: "Microsoft",
+    title: "Future-Focused",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+      "Looking ahead, Evoke Digital continues to innovate, embracing new technologies and marketing trends. Our mission is to empower brands to lead in the digital era, creating meaningful connections, measurable impact, and global growth opportunities that shape the future of marketing.",
     link: "https://microsoft.com",
   },
 ];
@@ -149,7 +149,7 @@ export const projects = [
 
 export default function CardHoverEffectDemo() {
   return (
-    <div className="max-w-5xl mx-auto px-8">
+    <div className="max-w-8xl mx-auto px-8">
       {/* The component usage now references the local component `HoverEffect` */}
       <HoverEffect items={projects} />
     </div>

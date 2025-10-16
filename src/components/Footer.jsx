@@ -10,16 +10,14 @@ export default function Footer() {
             {/* Logo */}
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
+                <img src="/favicon.ico" alt="App Icon" width="32" height="32" />
                 
               </div>
             </div>
 
             {/* Description */}
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Making the world a better place through constructing elegant hierarchies.
+              Transforming brands through creativity, strategy, and innovation worldwide.
             </p>
 
             {/* Social Icons */}
@@ -63,31 +61,31 @@ export default function Footer() {
 
           {/* Solutions Column */}
           <div>
-            <h3 className="text-white font-semibold text-sm mb-4">Solutions</h3>
+            <h3 className="text-white font-semibold text-sm mb-4">Marketing Services</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Marketing
+                  Digital Marketing
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Analytics
+                  Data Analytics
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Automation
+                  Advertisement
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Commerce
+                  Search Engine Optimization
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Insights
+                  Content Marketing
                 </Link>
               </li>
             </ul>
@@ -95,22 +93,29 @@ export default function Footer() {
 
           {/* Support Column */}
           <div>
-            <h3 className="text-white font-semibold text-sm mb-4">Support</h3>
+            <h3 className="text-white font-semibold text-sm mb-4">Design Services</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Submit ticket
+                  Graphic Designing
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Documentation
+                  Video Editing
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Guides
+                  Web Design
                 </Link>
+                
+              </li>
+              <li>
+                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                  CGI Ads
+                </Link>
+                
               </li>
             </ul>
           </div>
@@ -121,22 +126,22 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  About
+                  Contact Us
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Blog
+                  History
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Jobs
+                 About Us 
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                  Press
+                  Our works
                 </Link>
               </li>
             </ul>
@@ -167,7 +172,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-slate-800 mt-12 pt-8">
-          <p className="text-slate-400 text-sm">© 2024 Your Company, Inc. All rights reserved.</p>
+          <p className="text-slate-400 text-sm">© 2026 Evoke Digital, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>

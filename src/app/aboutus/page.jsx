@@ -9,7 +9,7 @@ import Section6aboutus from '@/components/Section6aboutus';
 
 
 import React from 'react'
-import AppleCardsCarouselDemo from '@/components/acard/cardp2'
+
 
 
 export function page() {
@@ -67,7 +67,7 @@ We partner with brands that crave bold ideas and measurable results, and we welc
    <Section6aboutus />
       <Section2aboutus />
 
-  <AppleCardsCarouselDemo />
+  
   <Footer/>
         
     </div>

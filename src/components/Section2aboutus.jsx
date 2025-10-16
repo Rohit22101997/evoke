@@ -4,10 +4,10 @@ import { useState } from 'react';
 
 const teamMembers = [
   {
-    name: 'Alice Johnson',
+    name: 'Rohit Kumar',
     title: 'CEO & Founder',
-    description: 'Alice has over 15 years of experience in strategic leadership and business development. Our guiding force, she ensures we stay ahead of industry trends.',
-    image: 'https://via.placeholder.com/150/0000FF/FFFFFF?text=Alice', // Placeholder for Alice, will be replaced by actual blue card
+    description: 'Alice has over 5+ years of experience in strategic leadership and business development. Our guiding force, she ensures we stay ahead of industry trends.',
+    image: 'https://via.placeholder.com/150/0000FF/FFFFFF?text=Alice', // Placeholder for Alice, will be replaced by actual orange card
     social: {
       linkedin: '#',
       twitter: '#',
@@ -73,11 +73,11 @@ const TeamSlider = () => {
         <div className="flex justify-between items-center mb-12">
           <div>
             <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800 border border-gray-300">
-              EXPERTISE
+              Express
             </span>
             <h2 className="mt-6 text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-              Explore our comprehensive <br />
-              service offerings
+              Discover the full power of our <br />
+              marketing solutions. 
             </h2>
           </div>
           <div className="flex space-x-3">
@@ -85,7 +85,7 @@ const TeamSlider = () => {
               onClick={handleSlidePrev}
               disabled={currentIndex === 0}
               className={`p-3 rounded-full border border-gray-300 ${
-                currentIndex === 0 ? 'text-gray-400 bg-gray-100 cursor-not-allowed' : 'text-blue-600 hover:bg-blue-50 transition-colors'
+                currentIndex === 0 ? 'text-gray-400 bg-gray-100 cursor-not-allowed' : 'text-orange-600 hover:bg-orange-50 transition-colors'
               }`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -96,7 +96,7 @@ const TeamSlider = () => {
               onClick={handleSlideNext}
               disabled={currentIndex >= maxIndex}
               className={`p-3 rounded-full border border-gray-300 ${
-                currentIndex >= maxIndex ? 'text-gray-400 bg-gray-100 cursor-not-allowed' : 'text-blue-600 hover:bg-blue-50 transition-colors'
+                currentIndex >= maxIndex ? 'text-gray-400 bg-gray-100 cursor-not-allowed' : 'text-orange-600 hover:bg-orange-50 transition-colors'
               }`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -110,7 +110,7 @@ const TeamSlider = () => {
           {featuredMember && (
             <div className="w-full lg:w-1/4 flex-shrink-0 p-2">
               {/* Feature card now has h-72 to match the height of the sliding container */}
-              <div className="bg-blue-600 text-white rounded-lg p-6 h-72 flex flex-col justify-between">
+              <div className="bg-orange-600 text-white rounded-lg p-6 h-72 flex flex-col justify-between">
                 <div>
                   <h3 className="text-xl font-semibold">{featuredMember.name}</h3>
                   <p className="text-sm opacity-80 mt-1">{featuredMember.title}</p>

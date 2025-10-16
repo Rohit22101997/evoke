@@ -7,6 +7,7 @@ import Section2History from "@/components/Section2History";
 import Section5history from "@/components/Section5history";
 import Section6history from "@/components/Section6history";
 import Section7history from "@/components/Section7history";
+import Section9history from "@/components/Section9history";
 import Herohistory from "@/components/Herohistory";
 
 
@@ -16,6 +17,7 @@ export default function page() {
     <Navbar/>
     <Herohistory />
     <Section3history />
+    <Section9history />
       <Section7history />
     <Section6history />
 

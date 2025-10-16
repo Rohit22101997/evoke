@@ -1,7 +1,7 @@
 export default function AiQuote() {
   return (
     <section className="bg-black text-white">
-      <div className="mx-auto max-w-6xl px-6 py-16">
+      <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 gap-50 md:grid-cols-2 md:items-center">
           {/* Left: image */}
           <div className="overflow-hidden">

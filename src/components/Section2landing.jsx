@@ -20,7 +20,7 @@ const ElevateDigitalVision = () => {
       </div>
 
       <div className="relative z-10 text-center">
-        <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-extrabold mb-4">
+        <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-extrabold mb-2">
           Elevate Your
         </h1>
         
@@ -31,7 +31,7 @@ const ElevateDigitalVision = () => {
         */}
         <h2 className={
               // Combine existing Tailwind classes with the font class from Next.js
-              `text-6xl md:text-8xl py-15 lg:text-9xl font-extrabold mb-8 ${pacifico.className}`
+              `text-6xl md:text-8xl pt-4 pb-14 lg:text-9xl font-extrabold mb-8 ${pacifico.className}`
             }
             style={{
               backgroundImage: 'linear-gradient(to right, #fffc59ff, #ee5903ff)', // Gradient for the text fill

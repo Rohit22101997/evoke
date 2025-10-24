@@ -1,102 +1,48 @@
-export default function BankingServices() {
-  const services = [
-    {
-      id: 1,
-      name: "Personal Banking",
-      icon: (
-        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-          />
-        </svg>
-      ),
-    },
-    {
-      id: 2,
-      name: "Business Banking",
-      icon: (
-        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-          />
-        </svg>
-      ),
-    },
-    {
-      id: 3,
-      name: "Investment Services",
-      icon: (
-        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      ),
-    },
-    {
-      id: 4,
-      name: "Digital Banking",
-      icon: (
-        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-          />
-        </svg>
-      ),
-    },
-  ]
+// components/HeroSection.js
+import Image from 'next/image';
 
+const HeroSection = () => {
   return (
-    <div className="max-w-6xl py-20 mx-auto">
-      <div className="bg-gray-100 rounded-3xl p-8 lg:p-12">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
-                Browse our set of banking services and offerings
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Discover comprehensive banking solutions designed to meet all your financial needs with innovative
-                technology and personalized service.
-              </p>
-            </div>
+    <div className="relative bg-black text-white  flex items-center justify-center overflow-hidden">
+      {/* Background Image/Illustration */}
+      <div className="absolute inset-0 z-0 opacity-0">
+        <Image
+          src="/Images/smms4.png" // Make sure to place your image in the public/images directory
+          alt="Ethan Carter - Tattooed Head"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      </div>
 
-            <button className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full transition-colors duration-200">
-              Learn more
-              <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
-                <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
+      {/* Content */}
+      <div className="relative z-10 p-8 md:p-16 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto">
+        {/* Left Section - Name */}
+        <div className="text-left mb-8 md:mb-0 md:w-1/2">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold leading-none tracking-tight">
+            EVOKE
+            <br />
+            DIGITAL
+          </h1>
+        </div>
+
+        {/* Right Section - Quote and Buttons */}
+        <div className="text-right md:w-1/2 flex flex-col items-end">
+          <p className="text-sm md:text-base mb-8 max-w-xs">
+            Your Brand, Trending Everywhere.
+          </p>
+          <div className="flex space-x-4">
+            <button className="px-6 py-3 border border-white text-white text-sm font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-300">
+              CONNECT NOW
             </button>
-          </div>
-
-          {/* Right Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer group"
-              >
-                <div className="space-y-4">
-                  <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center group-hover:bg-green-100 transition-colors duration-200">
-                    {service.icon}
-                  </div>
-                  <h3 className="font-semibold text-gray-900 text-sm leading-tight">{service.name}</h3>
-                </div>
-              </div>
-            ))}
+            <button className="px-6 py-3 bg-white text-gray-900 text-sm font-semibold hover:bg-transparent hover:text-white hover:border hover:border-white transition-colors duration-300">
+              CONTACT
+            </button>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default HeroSection;

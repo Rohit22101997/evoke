@@ -7,8 +7,8 @@ export default function ServicesComponent() {
     },
     {
       number: "02", 
-      title: "Interface Design",
-      description: "Our interface design approach focuses on creating intuitive, user-centered experiences that seamlessly blend aesthetics with functionality, ensuring every interaction feels natural and purposeful."
+      title: "Advertisement Campaigns",
+      description: "We create bold, data-driven ad campaigns that capture attention, spark engagement, and drive measurable results."
     },
     {
       number: "03",
@@ -17,8 +17,13 @@ export default function ServicesComponent() {
     },
     {
       number: "04",
-      title: "Mobile Design",
-      description: "Our mobile design expertise ensures your digital presence translates perfectly to mobile devices, with touch-optimized interfaces and mobile-first thinking that delivers exceptional user experiences on any screen size."
+      title: "Creative Graphic Design",
+      description: "We craft visually stunning designs that communicate your brand’s story and leave a lasting impression."
+    },
+    {
+      number: "05",
+      title: "Engaging Video Editing Services",
+      description: "We produce captivating, high-quality videos that tell stories, boost engagement, and elevate your brand’s digital presence."
     }
   ];
 
@@ -28,11 +33,11 @@ export default function ServicesComponent() {
       <div className="container mx-auto px-6 py-16">
         <div className="">
           <p className="text-gray-400 text-sm mb-4 tracking-wide">
-            SERVICES
+            OFFERINGS
           </p>
           <h1 className="text-4xl md:text-5xl font-light leading-tight mb-8">
-            We believe that we can live in a world where{" "}
-            <span className="italic text-gray-500">every product or service</span> has an easy to use experience on all platforms. And our mission is to make it happen.
+            We believe every brand deserves a powerful digital presence.{" "}
+            <span className="italic text-orange-500">Our mission is to create seamless, impactful</span> marketing experiences that connect businesses with their audiences across every platform.
           </h1>
         </div>
       </div>
@@ -43,7 +48,7 @@ export default function ServicesComponent() {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="border-t border-gray-800 py-12 hover:bg-gray-900/20 transition-colors duration-300 cursor-pointer group"
+              className="border-t border-gray-800 py-12 hover:bg-orange-500/80 transition-colors duration-300 cursor-pointer group"
             >
               <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                 {/* Number */}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const carouselData = [
@@ -41,6 +41,15 @@ export default function SpecializationCarousel() {
   const goToSlide = (index) => {
     setCurrentIndex(index)
   }
+
+  // 🕒 Auto-slide logic
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide()
+    }, 5000) // auto-slide every 5 seconds
+
+    return () => clearInterval(interval) // cleanup on unmount
+  }, [currentIndex])
 
   return (
     <div className="w-full max-w-8xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 mx-auto">
@@ -113,7 +122,6 @@ export default function SpecializationCarousel() {
                       {/* Overlay Content */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
                         <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
-                          {/* Number and Title */}
                           <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                             <span className="text-white/90 text-base sm:text-lg font-medium">{item.number}</span>
                             <h3 className="text-white text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight">
@@ -121,7 +129,6 @@ export default function SpecializationCarousel() {
                             </h3>
                           </div>
 
-                          {/* Tags */}
                           <div className="flex flex-wrap gap-1.5 sm:gap-2">
                             {item.tags.map((tag, tagIndex) => (
                               <span
@@ -155,7 +162,6 @@ export default function SpecializationCarousel() {
               <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
             </button>
 
-            {/* Mobile Dots Indicator */}
             <div className="flex gap-2">
               {carouselData.map((_, index) => (
                 <button
@@ -180,7 +186,7 @@ export default function SpecializationCarousel() {
         </div>
       </div>
 
-      {/* Thumbnail Preview (Desktop & Tablet) */}
+      {/* Thumbnail Preview */}
       <div className="hidden md:block mt-6 lg:mt-8">
         <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
           {carouselData.map((item, index) => (
@@ -189,14 +195,14 @@ export default function SpecializationCarousel() {
               onClick={() => goToSlide(index)}
               className={`relative overflow-hidden rounded-lg sm:rounded-xl transition-all duration-300 ${
                 index === currentIndex
-                  ? "ring-2 sm:ring-4 ring-blue-500 scale-102 sm:scale-105"
+                  ? "ring-2 sm:ring-4 ring-orange-500 scale-102 sm:scale-105"
                   : "hover:scale-102 opacity-70 hover:opacity-100"
               }`}
             >
-              <img 
-                src={item.image || "/placeholder.svg"} 
-                alt={item.title} 
-                className="w-full h-20 sm:h-24 lg:h-32 xl:h-36 object-cover" 
+              <img
+                src={item.image || "/placeholder.svg"}
+                alt={item.title}
+                className="w-full h-20 sm:h-24 lg:h-32 xl:h-36 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
                 <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3">
@@ -213,7 +219,6 @@ export default function SpecializationCarousel() {
         </div>
       </div>
 
-      {/* Touch gesture indicators for mobile */}
       <div className="md:hidden mt-4 text-center">
         <p className="text-xs text-gray-500">Swipe left or right to navigate</p>
       </div>

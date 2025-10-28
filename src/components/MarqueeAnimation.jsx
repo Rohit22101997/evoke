@@ -3,7 +3,10 @@
 import React from "react";
 
 const Marquee = ({ text = "GRAPHIC DESIGN", text2 = "WEB DESIGN" , 
-  text3 = "UXUI DESIGN" , text4 = "VIDEO EDITING" , text5 = "ADVERTISEMENT"}) => {
+  text3 = "UXUI DESIGN" , text4 = "VIDEO EDITING" , text5 = "ADVERTISEMENT",
+text6 = "GRAPHIC DESIGN", text7 = "WEB DESIGN" , 
+  text8 = "UXUI DESIGN" , text9 = "VIDEO EDITING" , text10 = "ADVERTISEMENT"}) => {
+    
   return (
     <>
     <div className="overflow-hidden mb-50 whitespace-nowrap py-10 w-full bg-black">
@@ -20,6 +23,11 @@ const Marquee = ({ text = "GRAPHIC DESIGN", text2 = "WEB DESIGN" ,
         <span className="mr-10">{text3}</span>
         <span className="mr-10">{text4}</span>
         <span className="mr-10">{text5}</span>
+         <span className="mr-10">{text6}</span>
+        <span className="mr-10">{text7}</span>
+        <span className="mr-10">{text8}</span>
+        <span className="mr-10">{text9}</span>
+        <span className="mr-10">{text10}</span>
       </div>
 
       

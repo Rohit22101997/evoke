@@ -46,7 +46,7 @@ export default function SpecializationCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide()
-    }, 5000) // auto-slide every 5 seconds
+    }, 4000) // auto-slide every 5 seconds
 
     return () => clearInterval(interval) // cleanup on unmount
   }, [currentIndex])

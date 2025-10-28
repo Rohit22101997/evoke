@@ -11,9 +11,9 @@ const OpenPartnerships = () => {
           How Open is changing the way we work <br className="hidden sm:block" /> with clients and partners
         </h2>
         <p className="text-gray-400 text-base sm:text-lg text-center mb-12 max-w-3xl mx-auto">
-          WPP Open combines expert teams with advanced technology to scale up productivity and scale out
-          institutional expertise. Our platform encodes WPP&apos;s proprietary knowledge into globally accessible AI
-          agents, allowing your teams to work smarter and deliver more effective marketing, faster and at scale.
+         EVOKE Digital brings together expert creative minds and powerful AI technology to amplify productivity and
+          elevate digital excellence. Our innovative platform transforms EVOKE’s strategic and creative expertise into
+           intelligent, accessible AI-driven solutions empowering your teams to work smarter, create faster, and deliver impactful marketing results at scale.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -21,28 +21,28 @@ const OpenPartnerships = () => {
           <div className="bg-gradient-to-br from-gray-900 to-black rounded-lg shadow-lg overflow-hidden flex flex-col justify-between p-6">
             <div className="flex items-center justify-center h-40">
               {/* Replace with actual logo images if available */}
-              <div className="text-white text-4xl font-bold mr-4">WPP</div>
-              <div className="text-gray-300 text-4xl font-thin">▲</div>
-              <div className="text-white text-4xl font-bold ml-4">Vercel</div>
+              <div className="text-white text-4xl font-bold mr-4">EVOKE</div>
+              <div className="text-gray-300 text-4xl font-thin">|</div>
+              <div className="text-white text-4xl font-bold ml-4">ROF</div>
             </div>
             <div className="pt-4 border-t border-gray-700 mt-4">
               <p className="text-gray-300 text-sm text-center">
-                WPP and Vercel expand partnership to accelerate AI-powered digital experience craft
+                EVOKE and ROF expand partnership to accelerate AI-powered digital experience craft
               </p>
             </div>
           </div>
 
           {/* Card 2: WPP + TikTok */}
-          <div className="bg-gradient-to-br from-purple-800 to-black rounded-lg shadow-lg overflow-hidden flex flex-col justify-between p-6">
+          <div className="bg-gradient-to-br from-orange-800 to-black rounded-lg shadow-lg overflow-hidden flex flex-col justify-between p-6">
             <div className="flex items-center justify-center h-40">
               {/* Replace with actual logo images if available */}
-              <div className="text-white text-4xl font-bold mr-4">WPP</div>
+              <div className="text-white text-4xl font-bold mr-4">EVOKE</div>
               <div className="text-white text-4xl font-thin">|</div>
-              <div className="text-white text-4xl font-bold ml-4">TikTok</div>
+              <div className="text-white text-4xl font-bold ml-4">VEGH</div>
             </div>
             <div className="pt-4 border-t border-gray-700 mt-4">
               <p className="text-gray-300 text-sm text-center">
-                WPP and TikTok team up to unleash creative power with Symphony AI integration into WPP Open
+                EVOKE and VEGH team up to unleash creative power with Symphony AI integration into EVOKE
               </p>
             </div>
           </div>
@@ -52,15 +52,15 @@ const OpenPartnerships = () => {
             <div className="relative h-48 w-full">
               {/* This is a placeholder for the event image */}
               <Image
-                src="/images/wpp-ibm-event.jpg" // You'll need to add an image at this path
-                alt="WPP and IBM team discussing Watsonx"
+                src="/Images/s10ow.jpg" // You'll need to add an image at this path
+                alt="EVOKE and IBM team discussing Watsonx"
                 layout="fill"
                 objectFit="cover"
               />
             </div>
             <div className="p-6">
-              <p className="text-gray-700 text-sm text-center">
-                WPP and IBM team up to revolutionise business-to-business marketing with generative AI
+              <p className="text-black text-sm text-center">
+                EVOKE and leading innovators unite to unleash creative power with the Symphony AI integration now coming to EVOKE.
               </p>
             </div>
           </div>

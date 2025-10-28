@@ -24,14 +24,14 @@ export default function LogoSlider() {
           animation: "slide 35s linear infinite",
         }}
       >
-        <img src="/logo/logo1.png" className="h-12 mx-10 inline-block" />
-        <img src="/logos/barstool-store.svg" className="h-12 mx-10 inline-block" />
-        <img src="/logos/budweiser.svg" className="h-12 mx-10 inline-block" />
-        <img src="/logos/buzzfeed.svg" className="h-12 mx-10 inline-block" />
-        <img src="/logos/forbes.svg" className="h-12 mx-10 inline-block" />
-        <img src="/logos/macys.svg" className="h-12 mx-10 inline-block" />
-        <img src="/logos/menshealth.svg" className="h-12 mx-10 inline-block" />
-        <img src="/logos/mrbeast.svg" className="h-12 mx-10 inline-block" />
+        <img src="/logo/logo1.png" className="h-30 mx-10 inline-block" />
+        <img src="/logo/logo2.png" className="h-30 mx-10 inline-block" />
+        <img src="/logo/logo3.png" className="h-30 mx-10 inline-block" />          
+        <img src="/logo/logo1.png" className="h-30 mx-10 inline-block" />
+        <img src="/logo/logo2.png" className="h-30 mx-10 inline-block" />
+        <img src="/logo/logo3.png" className="h-30 mx-10 inline-block" />
+        <img src="/logo/logo1.png" className="h-30 mx-10 inline-block" />
+        <img src="/logo/logo2.png" className="h-30 mx-10 inline-block" />
       </div>
 
       {/* Gradient Right */}

@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col justify-center px-6 py-12 md:px-24 lg:px-10">
+      <div className="relative z-10 flex h-full flex-col justify-center lg:px-6 py-12 md:px-24 lg:px-10">
         {/* Main Heading */}
         <h1 className="mb-4 text-6xl font-extrabold uppercase leading-tight text-white md:text-7xl lg:text-7xl">
           Content That  
@@ -45,7 +45,7 @@ const Hero = () => {
             href="/about"
             className="text-lg font-semibold uppercase text-white hover:underline"
           >
-            Know More
+            Connect with Us
           </a>
           <svg
             className="h-6 w-6 text-white"

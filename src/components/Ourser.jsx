@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const services = [
@@ -11,7 +11,7 @@ const services = [
       "Bring your brand to life with stunning visuals that captivate and inspire. Our design solutions blend creativity with strategy for maximum impact. Transform ideas into designs that leave a lasting impression.",
     image: "/Images/home1.jpg",
     imageAlt: "Developer workspace with code",
-  } ,
+  },
   {
     id: 2,
     title: "Advertising",
@@ -36,7 +36,6 @@ const services = [
     image: "/Images/business-professionals-discussing-analytics-and-da.jpg",
     imageAlt: "Business professionals discussing analytics",
   },
-  
 ]
 
 export default function ServicesCarousel() {
@@ -54,6 +53,15 @@ export default function ServicesCarousel() {
     setCurrentSlide(index)
   }
 
+  // 🔁 Auto Slide Every 4 Seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide()
+    }, 4000) // 4 seconds
+
+    return () => clearInterval(interval)
+  }, [currentSlide]) // Re-run when slide changes
+
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       {/* Header */}
@@ -61,10 +69,10 @@ export default function ServicesCarousel() {
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-gray-900 mb-3 sm:mb-4">
           <b> OUR SERVICES </b>
         </h2>
-        <p className="text-sm sm:text-base lg:text-lg text-center text-gray-600  mx-auto sm:mx-0">
+        <p className="text-sm sm:text-base lg:text-lg text-center text-gray-600 mx-auto sm:mx-0">
           We craft data driven marketing strategies that build brands and boost growth.
-From social media to SEO, every campaign is tailored to your audience.
-Design, content, and performance
+          From social media to SEO, every campaign is tailored to your audience.
+          Design, content, and performance
         </p>
       </div>
 
@@ -79,7 +87,8 @@ Design, content, and performance
             {services.map((service, index) => (
               <div key={service.id} className="w-full flex-shrink-0">
                 <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden">
-                  {/* Mobile Layout - Stacked */}
+                  
+                  {/* Mobile Layout */}
                   <div className="block lg:hidden">
                     <div className="relative h-48 sm:h-64">
                       <img
@@ -98,11 +107,12 @@ Design, content, and performance
                     </div>
                   </div>
 
-                  {/* Desktop Layout - Side by Side */}
-                  <div className={`hidden lg:flex min-h-[400px] xl:min-h-[450px] ${
-                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                  }`}>
-                    {/* Content Side */}
+                  {/* Desktop Layout */}
+                  <div
+                    className={`hidden lg:flex min-h-[400px] xl:min-h-[450px] ${
+                      index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                    }`}
+                  >
                     <div className="flex-1 p-8 xl:p-12 flex flex-col justify-center">
                       <h3 className="text-2xl xl:text-3xl font-bold text-gray-900 mb-4 xl:mb-6">
                         {service.title}
@@ -112,7 +122,6 @@ Design, content, and performance
                       </p>
                     </div>
 
-                    {/* Image Side */}
                     <div className="flex-1">
                       <img
                         src={service.image || "/placeholder.svg"}
@@ -151,8 +160,8 @@ Design, content, and performance
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-200 ${
-                index === currentSlide 
-                  ? "bg-gray-800 scale-125" 
+                index === currentSlide
+                  ? "bg-gray-800 scale-125"
                   : "bg-gray-300 hover:bg-gray-400"
               }`}
               aria-label={`Go to slide ${index + 1}`}
@@ -161,7 +170,7 @@ Design, content, and performance
         </div>
       </div>
 
-      {/* Service Counter - Optional */}
+      {/* Service Counter */}
       <div className="text-center mt-6 sm:mt-8">
         <span className="text-xs sm:text-sm text-gray-500">
           {currentSlide + 1} of {services.length}

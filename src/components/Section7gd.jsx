@@ -5,44 +5,44 @@ const WppIQComponent = () => {
   const articles = [
     {
       id: 1,
-      image: '/Images/smms31.jpg', // Replace with your image
-      title: 'Social Media Strategy',
-      description: 'Craft tailored strategies that align with your brand goals, audience, and platforms to maximize engagement and conversions.',
+      image: '/Images/s7gd1.jpg', // Replace with your image
+      title: 'Logo Design',
+      description: 'Crafting unique, memorable logos that capture your brand’s identity, values, and vision — leaving a lasting impression on your audience.',
       link: '/article/collaboration-marketing-intelligence',
     },
     {
       id: 2,
-      image: '/Images/smms32.jpg', // Replace with your image
-      title: 'Content Creation & Design',
-      description: 'Deliver eye-catching graphics, videos, and posts that tell your brand story and connect emotionally with your audience.',
+      image: '/Images/s7gd2.jpg', // Replace with your image
+      title: 'Social Media Graphics',
+      description: 'Eye-catching social media posts, stories, and ad creatives designed to boost engagement, enhance visibility, and strengthen your digital presence.',
       link: '/article/ai-adoption-behavioural-science',
     },
     {
       id: 3,
-      image: '/Images/smms33.jpg', // Replace with your image
-      title: 'Paid Advertising (Social Ads)',
-      description: 'Run highly targeted ad campaigns on platforms like Facebook, Instagram, LinkedIn, and Twitter to drive measurable results.',
+      image: '/Images/s7gd3.jpg', // Replace with your image
+      title: 'Brand Identity Design',
+      description: 'Complete brand identity packages including color palettes, typography, and visual styles that create consistency and recognition across all platforms.',
       link: '/article/3d-digital-twins-ai-content',
     },
     {
       id: 4,
-      image: '/Images/smms34.jpg', // Replace with your image
-      title: 'Community Engagement',
-      description: 'Build authentic relationships by responding, interacting, and engaging with your audience to foster brand loyalty.',
+      image: '/Images/s7gd4.jpg', // Replace with your image
+      title: 'Print & Marketing Collateral',
+      description: 'Designing impactful brochures, flyers, business cards, and banners that communicate your message clearly and reflect your brand professionalism.',
       link: '/article/collaboration-marketing-intelligence',
     },
     {
       id: 5,
-      image: '/Images/smms35.jpg', // Replace with your image
-      title: 'Analytics & Performance Tracking',
-      description: 'Monitor key metrics, track ROI, and optimize campaigns based on data-driven insights for continuous improvement.',
+      image: '/Images/s7gd5.jpg', // Replace with your image
+      title: 'Packaging Design',
+      description: 'Innovative packaging designs that attract attention, tell your product’s story, and influence purchase decisions through visual appeal and functionality.',
       link: '/article/ai-adoption-behavioural-science',
     },
     {
       id: 6,
-      image: '/Images/smms36.jpg', // Replace with your image
-      title: 'Influencer & Collaboration Marketing',
-      description: 'Partner with relevant influencers and creators to expand reach, increase credibility, and grow your brand organically.',
+      image: '/Images/s7gd6.jpg', // Replace with your image
+      title: 'Presentation Design',
+      description: 'Professionally designed PowerPoint and pitch decks that blend creativity and clarity, helping you present ideas with confidence and visual impact.',
       link: '/article/3d-digital-twins-ai-content',
     },
   ];

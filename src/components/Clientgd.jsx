@@ -6,7 +6,7 @@ export default function ServicesSection() {
         <div className="space-y-8">
           {/* Services Label */}
           <div className="inline-block">
-            <span className="text-orange-500 text-sm font-medium tracking-wide uppercase">Our Services</span>
+            <span className="text-orange-500 text-sm font-medium tracking-wide uppercase">Unlock your potential with our strategic offerings.</span>
           </div>
 
           {/* Main Heading */}
@@ -48,12 +48,12 @@ export default function ServicesSection() {
 
             {/* CTA Section */}
             <div className="flex items-center gap-4">
-              <span className="text-gray-900 font-medium">Choose your plan</span>
+              <span className="text-gray-900 font-medium">Our Creative Solution</span>
               <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
               <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition-colors duration-200">
-                Get Started
+                Get in Touch
               </button>
             </div>
           </div>

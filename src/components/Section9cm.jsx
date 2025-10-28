@@ -114,7 +114,7 @@ const TherapyCardsSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-b-xl"></div>
                 <button className="absolute bottom-5 left-5 px-5 py-2 bg-black text-white rounded-full text-sm font-medium flex items-center shadow-md hover:bg-orange-500 transition-colors duration-200">
-                  Read More
+                  Get in touch
                   <svg
                     className="ml-2 w-4 h-4"
                     fill="none"

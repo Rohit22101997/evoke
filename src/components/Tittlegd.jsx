@@ -7,11 +7,11 @@ export default function AwardsSection() {
   const [animatedNumber, setAnimatedNumber] = useState(0)
 
   const awards = [
-    { number: "98", title: "Good design award" },
-    { number: "78", title: "Engineering excellence Awards" },
-    { number: "52", title: "Red dot design award" },
-    { number: "29", title: "iF design award" },
-    { number: "18", title: "Industrial designers society" },
+    { number: "50+", title: "Logo identities built from scratch" },
+    { number: "500+", title: "Social media campaigns crafted to perfection" },
+    { number: "10+", title: "Brand makeovers that elevated businesses" },
+    { number: "50+", title: "Packaging designs that stand out on shelves" },
+    { number: "50+", title: "UI/UX designs enhancing user experiences" },
   ]
 
   useEffect(() => {
@@ -20,13 +20,13 @@ export default function AwardsSection() {
     // Animate the main number from 0 to 260
     const duration = 2000 // 2 seconds
     const steps = 60
-    const increment = 260 / steps
+    const increment = 500 / steps
     let current = 0
 
     const timer = setInterval(() => {
       current += increment
-      if (current >= 260) {
-        setAnimatedNumber(260)
+      if (current >= 500) {
+        setAnimatedNumber(500)
         clearInterval(timer)
       } else {
         setAnimatedNumber(Math.floor(current))
@@ -37,7 +37,7 @@ export default function AwardsSection() {
   }, [])
 
   return (
-    <div className="bg-gray-900 text-white p-8 md:p-12 lg:p-16">
+    <div className="bg-black text-white p-8 md:p-12 lg:p-16">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left side - Large number */}
@@ -60,10 +60,10 @@ export default function AwardsSection() {
               }`}
             >
               <h2 className="text-orange-500 text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide animate-pulse">
-                AWARDS FOR
+                PROJECTS DESIGNED
               </h2>
               <h3 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide">
-                DIGITAL INNOVATION
+                TO INSPIRE
               </h3>
             </div>
 

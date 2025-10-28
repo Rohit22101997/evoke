@@ -9,6 +9,7 @@ import Section4gd from '@/components/Section4gd';
 import Section5gd from '@/components/Section5gd';
 import Section6gd from '@/components/Section6gd';
 import Section7gd from '@/components/Section7gd';
+import Herogd from '@/components/Herogd';
 
 
 
@@ -16,6 +17,7 @@ export default function page() {
   return (
     <div className=''>
     <Navbar/>
+    <Herogd />
     <Herobannergd />
     <Section4gd />
     <Section7gd />

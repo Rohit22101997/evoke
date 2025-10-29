@@ -6,7 +6,7 @@ export default function Herogd() {
 
 
 
-<section className="relative bg-black text-white h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+<section className="relative bg-black text-white md:h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
   {/* Background elements - subtle stars/light rays */}
   <div className="absolute inset-0 z-0">
     {/* You can add a background image here or use CSS for subtle patterns */}

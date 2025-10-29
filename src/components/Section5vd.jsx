@@ -69,21 +69,7 @@ const PortfolioSection = () => {
                 className="w-full h-full transform transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="bg-white text-black rounded-full p-4 flex items-center justify-center">
-                  {/* Play icon - you can use an SVG here */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
+               
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-black/70 to-transparent">
                 <h4 className="text-xl font-semibold mb-1">{item.title}</h4>

@@ -49,7 +49,7 @@ export default function CaseStudiesGrid() {
       {/* Header Section */}
       <div className="max-w-7xl mx-auto mb-12">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-orange-500 mb-4">
+          <h1 className="text-4xl font-bold text-black mb-4">
             <b>Success Stories</b>
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -80,7 +80,7 @@ export default function CaseStudiesGrid() {
                 />
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="bg-black text-white text-xs font-semibold px-3 py-2 rounded-full hover: bg-orange">
                     {study.category}
                   </span>
                 </div>

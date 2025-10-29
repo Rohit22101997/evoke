@@ -8,6 +8,8 @@ import Section3vd from '@/components/Section3vd';
 import Section5vd from '@/components/Section5vd';
 import Textvd from '@/components/Textvd';
 import Videovd from '@/components/Videovd';
+import Section3ow from '@/components/Section3ow';
+
 
 export default function page() {
   return (
@@ -20,6 +22,7 @@ export default function page() {
     <Section2vd />
     <Section3vd />
     <Section5vd />
+    <Section3ow />
 
     <Footer/>
     </div>

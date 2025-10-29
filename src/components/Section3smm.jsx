@@ -51,7 +51,7 @@ const WppIQComponent = () => {
     <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-extrabold text-gray-900">Connect, Engage, and Grow.</h2>
+          <h2 className="text-3xl font-extrabold  text-gray-900">Connect, Engage, and Grow.</h2>
           <Link href="/wpp-iq" className="text-black hover:text-orange-500 text-lg font-medium flex items-center">
             Connect Now
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

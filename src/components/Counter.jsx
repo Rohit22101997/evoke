@@ -49,7 +49,7 @@ function AnimatedNumber({ targetValue, suffix, duration = 2000 }) {
 
   return (
     <div ref={elementRef} className="text-center">
-      <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-1 sm:mb-2">
+      <div className="text-5xl sm:text-6xl md:text-7xl lg:text-6xl font-extrabold text-foreground mb-3 leading-tight">
         {currentValue}{suffix}
       </div>
     </div>
@@ -58,12 +58,19 @@ function AnimatedNumber({ targetValue, suffix, duration = 2000 }) {
 
 export default function AnimatedCounter() {
   return (
-    <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
+    <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-16">
         {counters.map((c, i) => (
-          <div key={i} className="flex flex-col items-center text-center space-y-2 sm:space-y-3">
-            <AnimatedNumber targetValue={c.value} suffix={c.suffix} duration={2000 + i * 200} />
-            <p className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-[220px] leading-relaxed">
+          <div
+            key={i}
+            className="flex flex-col items-center text-center space-y-4"
+          >
+            <AnimatedNumber
+              targetValue={c.value}
+              suffix={c.suffix}
+              duration={2000 + i * 200}
+            />
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-[280px] leading-snug font-semibold">
               {c.label}
             </p>
           </div>

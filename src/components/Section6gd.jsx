@@ -70,18 +70,18 @@ const UseCases = () => {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto relative z-10 text-white"> {/* Changed text-gray-900 to text-white for readability */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-          Use cases
-        </h2>
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+          Creativity That Converts Vision Into Visuals
+        </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCaseItems.map((item, index) => (
             <div
               key={index}
               className={`
-                bg-white/30 border border-white/20 rounded-xl p-6 flex flex-col backdrop-blur-md
+                bg-black/30 border border-white/20 rounded-xl p-6 flex flex-col backdrop-blur-md
                 transition-all duration-300 ease-in-out transform
-                hover:scale-[1.02] hover:bg-white/50 hover:shadow-lg hover:shadow-blue-200/50
+                hover:scale-[1.02] hover:bg-orange/100 hover:shadow-lg hover:shadow-orange-600/100
                 ${
                   item.size === 'large' ? 'col-span-1 md:col-span-2 lg:col-span-1 xl:col-span-1' : ''
                 }
@@ -92,10 +92,10 @@ const UseCases = () => {
                   {item.icon}
                 </div>
               </div>
-              <h3 className="text-gray-900 text-xl font-semibold mb-2"> {/* Card title remains dark for contrast */}
+              <h3 className="text-white-900 text-xl font-semibold mb-2"> {/* Card title remains dark for contrast */}
                 {item.title}
               </h3>
-              <p className="text-gray-700 text-base">{item.description}</p> {/* Card description remains dark for contrast */}
+              <p className="text-white-700 text-base">{item.description}</p> {/* Card description remains dark for contrast */}
             </div>
           ))}
         </div>

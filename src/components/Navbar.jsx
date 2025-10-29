@@ -1,155 +1,283 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronDown, Search, Globe } from "lucide-react";
+import { useState, useEffect, useRef } from "react"; // 1. Import useEffect and useRef
+import { ChevronDown, Search, Globe, X } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navbarRef = useRef(null); // 2. Create a ref for the navbar
 
   const toggleDropdown = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
+  // Function to close menus
+  const closeMenus = () => {
+    setActiveDropdown(null);
+    setMobileOpen(false);
+  };
+
+  // 3. useEffect to handle outside clicks
+  useEffect(() => {
+    function handleClickOutside(event) {
+      // Check if the click is outside the navbar
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        closeMenus(); // Close all active menus
+      }
+    }
+
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [navbarRef]); // Dependency array: rerun if navbarRef changes (it won't, but standard practice)
+
+  // A helper to toggle mobile menu and clear dropdown
+  const toggleMobileMenu = () => {
+    setMobileOpen(!mobileOpen);
+    setActiveDropdown(null); // Close dropdowns when opening/closing mobile menu
+  };
+
   return (
-    <nav className="bg-black text-white px-6 py-4">
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
+    <nav
+      ref={navbarRef} // 4. Attach the ref to the nav element
+      className="bg-black text-white fixed top-0 w-full z-50 border-b border-gray-800"
+    >
+      <div className="flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
         {/* Logo */}
-        <div className="flex items-center">
-          <Link href="/" className="text-purple-500 text-2xl font-bold">
-            {/* Better to keep logo in /public and reference as /images/logo.png */}
-            <img
-              src="/Images/vertical logo-01.png"
-              alt="Logo"
-              width="216"
-              height="108"
-            />
-          </Link>
-        </div>
+        <Link href="/" className="flex items-center">
+          <img
+            src="/Images/vertical logo-01.png"
+            alt="Logo"
+            width="160"
+            height="60"
+            className="transition-transform hover:scale-105"
+          />
+        </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
-          {/* Marketing Services */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("what-we-do")}
-              className="flex items-center space-x-1 hover:text-gray-300 transition-colors"
-            >
-              <span>Marketing Services</span>
-              <ChevronDown className="w-4 h-4" />
-            </button>
-            {activeDropdown === "what-we-do" && (
-              <div className="absolute top-full  left-0 mt-2 w-48 bg-black rounded-md shadow-lg py-2 z-50">
-                <Link href="/seo" className="block px-4 py-2 hover:bg-gray-900">
-                  Search Engine Optimization
-                </Link>
-                <Link href="/ppc" className="block px-4 py-2 hover:bg-gray-900">
-                  Advertisement
-                </Link>
-                <Link href="/smm" className="block px-4 py-2 hover:bg-gray-900">
-                  Social Media Marketing
-                </Link>
-                <Link href="/cm" className="block px-4 py-2 hover:bg-gray-900">
-                  Content Marketing
-                </Link>
-              </div>
-            )}
-          </div>
+        <div className="hidden md:flex items-center space-x-8 text-1xl font-medium   tracking-wide">
+          {[
+            { label: "Marketing Services", id: "what-we-do" },
+            { label: "Design", id: "design" },
+            { label: "Our Work", id: "our-work", link: "/ow" },
+            { label: "Who We Are", id: "who-we-are" },
+          ].map((item) =>
+            item.link ? (
+              <Link
+                key={item.id}
+                href={item.link}
+                className="relative group pb-1 hover:text-orange-400 transition"
+                onClick={closeMenus} // Close menus on navigation for safety
+              >
+                {item.label}
+                <span className="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-orange-500 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            ) : (
+              <div key={item.id} className="">
+                <button
+                  onClick={() => toggleDropdown(item.id)}
+                  className={`flex items-center space-x-1 pb-1 transition ${
+                    activeDropdown === item.id
+                      ? "text-orange-400 border-b-2 border-orange-500"
+                      : "hover:text-orange-400"
+                  }`}
+                >
+                  <span>{item.label}</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
 
-          {/* Design */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("careers")}
-              className="flex items-center space-x-1 hover:text-gray-300 transition-colors"
-            >
-              <span>Design</span>
-              <ChevronDown className="w-4 h-4" />
-            </button>
-            {activeDropdown === "careers" && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-black rounded-md shadow-lg py-2 z-50">
-                <Link href="/ud" className="block px-4 py-2 hover:bg-gray-800">
-                  UX/UI Design
-                </Link>
-                <Link href="/gd" className="block px-4 py-2 hover:bg-gray-800">
-                  Graphic Designs
-                </Link>
-                <Link href="/vd" className="block px-4 py-2 hover:bg-gray-800">
-                  Video Editing
-                </Link>
-                <Link href="/cgi" className="block px-4 py-2 hover:bg-gray-800">
-                  CGI Ads
-                </Link>
-              </div>
-            )}
-          </div>
+                {/* Dropdown Content */}
+                {activeDropdown === item.id && (
+                  // You might consider adding a role="menu" or similar for accessibility
+                  <div className="absolute left-0 top-full p w-screen bg-[#1C1C1C] text-white pt-28 pb-10 px-20 shadow-2xl border-t border-gray-800">
+                    <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-sm leading-relaxed">
+                      {item.id === "what-we-do" && (
+                        <>
+                          <div>
+                            <h3 className="text-orange-500 text-2xl   mb-3">
+                              Marketing Services
+                            </h3>
+                            <ul className="space-y-2">
+                              <li>
+                                <Link
+                                  href="/seo"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  Search Engine Optimization
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/ppc"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  Advertisement
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/smm"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  Social Media Marketing
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/cm"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  Content Marketing
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </>
+                      )}
 
-          <Link href="/ow" className="hover:text-gray-300 transition-colors">
-            Our Work
-          </Link>
+                      {item.id === "design" && (
+                        <>
+                          <div>
+                            <h3 className="text-orange-500 text-2xl   mb-3">
+                              Design Service
+                            </h3>
+                            <ul className="space-y-2">
+                              <li>
+                                <Link
+                                  href="/ud"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  UX/UI Design
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/gd"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  Graphic Designs
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/vd"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  Video Editing
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/cgi"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  CGI Ads
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </>
+                      )}
 
-          {/* Who We Are */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("who-we-are")}
-              className="flex items-center space-x-1 hover:text-gray-300 transition-colors"
-            >
-              <span>Who we are</span>
-              <ChevronDown className="w-4 h-4" />
-            </button>
-            {activeDropdown === "who-we-are" && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-black rounded-md shadow-lg py-2 z-50">
-                <Link href="/aboutus" className="block px-4 py-2 hover:bg-gray-800">
-                  About Us
-                </Link>
-                <Link href="/contactus" className="block px-4 py-2 hover:bg-gray-800">
-                  Contact Us
-                </Link>
-                <Link href="/history" className="block px-4 py-2 hover:bg-gray-800">
-                  History
-                </Link>
+                      {item.id === "who-we-are" && (
+                        <>
+                          <div>
+                            <h3 className="text-orange-500 text-2xl   mb-3">
+                              Company
+                            </h3>
+                            <ul className="space-y-2">
+                              <li>
+                                <Link
+                                  href="/aboutus"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  About Us
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/contactus"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  Contact Us
+                                </Link>
+                              </li>
+                              <li>
+                                <Link
+                                  href="/history"
+                                  className="hover:text-orange-400"
+                                  onClick={closeMenus} // Close menus on navigation
+                                >
+                                  History
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
+            )
+          )}
         </div>
 
-        {/* Right Icons */}
-        <div className="flex items-center space-x-4">
-          <button className="hover:text-gray-300 transition-colors">
+        {/* Right Side */}
+        <div className="flex items-center space-x-6">
+          <button className="hover:text-orange-400 transition" onClick={closeMenus}>
             <Search className="w-5 h-5" />
           </button>
 
           <div className="relative">
             <button
               onClick={() => toggleDropdown("region")}
-              className="flex items-center space-x-2 hover:text-gray-300 transition-colors"
+              className="flex items-center space-x-1 hover:text-orange-400 transition"
             >
               <Globe className="w-5 h-5" />
-              <span>India</span>
+              <span className="  text-sm font-semibold">India</span>
               <ChevronDown className="w-4 h-4" />
             </button>
             {activeDropdown === "region" && (
-              <div className="absolute top-full right-0 mt-2 w-32 bg-gray-900 rounded-md shadow-lg py-2 z-50">
-                <a href="#" className="block px-4 py-2 hover:bg-gray-800">
-                  India
-                </a>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-800">
-                  USA
-                </a>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-800">
-                  UK
-                </a>
+              <div className="absolute right-0 mt-2 bg-[#1C1C1C] border border-gray-800 rounded-md w-32 py-2 shadow-lg">
+                {["India", "USA", "UK"].map((r) => (
+                  <a
+                    key={r}
+                    href="#"
+                    className="block px-4 py-2 hover:text-orange-400"
+                    onClick={closeMenus} // Close menus on selection
+                  >
+                    {r}
+                  </a>
+                ))}
               </div>
             )}
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="text-white focus:outline-none"
-              aria-label="Toggle menu"
-            >
+          {/* Mobile menu toggle */}
+          <button
+            className="md:hidden"
+            onClick={toggleMobileMenu} // Use the new helper function
+          >
+            {mobileOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -163,66 +291,102 @@ export default function Navbar() {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-            </button>
-          </div>
+            )}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Menu Items */}
-      {mobileOpen && (
-        <div className="md:hidden mt-4 space-y-4 px-2">
-          <button
-            onClick={() => toggleDropdown("mobile-services")}
-            className="flex w-full justify-between items-center px-2 py-2 hover:text-gray-300"
-          >
-            Marketing Services
-            <ChevronDown className="w-4 h-4" />
-          </button>
-          {activeDropdown === "mobile-services" && (
-            <div className="ml-4 flex flex-col gap-2 ">
-              <Link href="/seo">Search Engine Optimization</Link>
-              <Link href="/ppc">Advertisement</Link>
-              <Link href="/smm">Social Media Marketing</Link>
-              <Link href="/cm">Content Marketing</Link>
-            </div>
-          )}
+      {/* Mobile Menu */}
+{mobileOpen && (
+  <div className="md:hidden bg-black border-t border-gray-800 py-4 px-6 space-y-4">
+    {[
+      {
+        label: "Marketing Services",
+        id: "marketing",
+        links: [
+          { label: "Search Engine Optimization", href: "/seo" },
+          { label: "Advertisement", href: "/ppc" },
+          { label: "Social Media Marketing", href: "/smm" },
+          { label: "Content Marketing", href: "/cm" },
+        ],
+      },
+      {
+        label: "Design",
+        id: "design",
+        links: [
+          { label: "UX/UI Design", href: "/ud" },
+          { label: "Graphic Designs", href: "/gd" },
+          { label: "Video Editing", href: "/vd" },
+          { label: "CGI Ads", href: "/cgi" },
+        ],
+      },
+      {
+        label: "Our Work",
+        href: "/ow",
+      },
+      {
+        label: "Who We Are",
+        id: "who",
+        links: [
+          { label: "About Us", href: "/aboutus" },
+          { label: "Contact Us", href: "/contactus" },
+          { label: "History", href: "/history" },
+        ],
+      },
+    ].map((item) => (
+      <div key={item.label}>
+        {/* If it has sublinks */}
+        {item.links ? (
+          <div>
+            <button
+              onClick={() =>
+                setActiveDropdown(activeDropdown === item.id ? null : item.id)
+              }
+              className="flex justify-between w-full items-center text-left hover:text-orange-400"
+            >
+              <span>{item.label}</span>
+              <ChevronDown
+                className={`w-4 h-4 transition-transform ${
+                  activeDropdown === item.id ? "rotate-180" : ""
+                }`}
+              />
+            </button>
 
-          <button
-            onClick={() => toggleDropdown("mobile-design")}
-            className="flex w-full justify-between items-center px-2 py-2 hover:text-gray-300"
+            {/* Submenu */}
+            {activeDropdown === item.id && (
+              <div className="pl-4 mt-2 space-y-2 text-sm border-l border-gray-700">
+                {item.links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block hover:text-orange-400"
+                    onClick={() => {
+                      setMobileOpen(false); // close mobile menu
+                      setActiveDropdown(null); // close submenus
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          // If it’s a single link
+          <Link
+            href={item.href}
+            className="block hover:text-orange-400"
+            onClick={() => setMobileOpen(false)}
           >
-            Design
-            <ChevronDown className="w-4 h-4" />
-          </button>
-          {activeDropdown === "mobile-design" && (
-            <div className="ml-4  flex flex-col gap-2">
-              <Link href="/ud">UX/UI Design</Link>
-              <Link href="/gd">Graphic Designs</Link>
-              <Link href="/vd">Video Editing</Link>
-              <Link href="/cgi">CGI Ads</Link>
-            </div>
-          )}
-
-          <Link href="/ow" className="block px-2 py-2 hover:text-gray-300">
-            Our Work
+            {item.label}
           </Link>
+        )}
+      </div>
+    ))}
+  </div>
+)}
 
-          <button
-            onClick={() => toggleDropdown("mobile-who")}
-            className="flex w-full justify-between items-center px-2 py-2 hover:text-gray-300"
-          >
-            Who we are
-            <ChevronDown className="w-4 h-4" />
-          </button>
-          {activeDropdown === "mobile-who" && (
-            <div className="ml-4 flex flex-col gap-2">
-              <Link href="/aboutus">About Us</Link>
-              <Link href="/team">Team</Link>
-              <Link href="/history">History</Link>
-            </div>
-          )}
-        </div>
-      )}
+      
     </nav>
   );
 }

@@ -3,21 +3,20 @@ import React from 'react';
 
 export default function HeroTextSection() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gray-50 p-8">
-      {/* Left side: Abstract logo/shape */}
-      {/* This is a simple SVG to mimic the shape from the image. 
-          For a real scenario, you'd use your actual logo SVG or an image. */}
-      <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-16">
-      <img
-        src="/Images/s8ow.jpg"
-        alt="Abstract geometric logo"
-       
-      />
+    <section className="flex flex-col md:flex-row items-center justify-between w-full min-h-[80vh] bg-gray-50 px-4 sm:px-8 lg:px-16 py-10 md:py-20">
+      
+      {/* Left side: Image / Abstract Shape */}
+      <div className="flex justify-center md:justify-start w-full md:w-1/2 mb-8 md:mb-0">
+        <img
+          src="/Images/s8ow.jpg"
+          alt="Abstract geometric logo"
+          className="w-3/4 sm:w-2/3 md:w-[80%] lg:w-[70%] h-auto object-contain"
+        />
       </div>
 
       {/* Right side: Text content */}
-      <div className="text-center md:text-left">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-gray-900">
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-gray-900">
           Unleashing the
           <br />
           Potential of{' '}

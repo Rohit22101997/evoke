@@ -1,51 +1,80 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react"; // 1. Import useEffect and useRef
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, Search, Globe, X } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const navbarRef = useRef(null); // 2. Create a ref for the navbar
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navbarRef = useRef(null);
+  const router = useRouter();
 
   const toggleDropdown = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
-  // Function to close menus
   const closeMenus = () => {
     setActiveDropdown(null);
     setMobileOpen(false);
+    setSearchOpen(false);
   };
 
-  // 3. useEffect to handle outside clicks
   useEffect(() => {
     function handleClickOutside(event) {
-      // Check if the click is outside the navbar
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-        closeMenus(); // Close all active menus
+        closeMenus();
       }
     }
 
-    // Bind the event listener
     document.addEventListener("mousedown", handleClickOutside);
-
-    // Clean up the event listener on component unmount
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [navbarRef]); // Dependency array: rerun if navbarRef changes (it won't, but standard practice)
+  }, [navbarRef]);
 
-  // A helper to toggle mobile menu and clear dropdown
   const toggleMobileMenu = () => {
     setMobileOpen(!mobileOpen);
-    setActiveDropdown(null); // Close dropdowns when opening/closing mobile menu
+    setActiveDropdown(null);
+  };
+
+  // --- Search feature logic ---
+  const pages = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/aboutus" },
+    { name: "Contact Us", path: "/contactus" },
+    { name: "Our Work", path: "/ow" },
+    { name: "SEO & SEM", path: "/seo" },
+    { name: "Paid Advertising", path: "/ppc" },
+    { name: "Social Media Growth", path: "/smm" },
+    { name: "Content Strategy", path: "/cm" },
+    { name: "Web & App Design", path: "/ud" },
+    { name: "Brand & Graphic Design", path: "/gd" },
+    { name: "Video Production", path: "/vd" },
+    { name: "Motion & CGI Ads", path: "/cgi" },
+    { name: "History", path: "/history" },
+  ];
+
+  const filteredPages = searchQuery
+    ? pages.filter((p) =>
+        p.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (filteredPages.length > 0) {
+      router.push(filteredPages[0].path);
+      closeMenus();
+    }
   };
 
   return (
     <nav
-      ref={navbarRef} // 4. Attach the ref to the nav element
+      ref={navbarRef}
       className="bg-black text-white fixed top-0 w-full z-50 border-b border-gray-800"
     >
       <div className="flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
@@ -61,25 +90,25 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8 text-1xl font-medium   tracking-wide">
+        <div className="hidden md:flex items-center space-x-8 text-1xl font-medium tracking-wide">
           {[
-            { label: "Marketing Services", id: "what-we-do" },
-            { label: "Design", id: "design" },
+            { label: "Digital Marketing", id: "what-we-do" },
+            { label: "Creative Studio", id: "Creative Studio" },
             { label: "Our Work", id: "our-work", link: "/ow" },
-            { label: "Who We Are", id: "who-we-are" },
+            { label: "About Us", id: "who-we-are" },
           ].map((item) =>
             item.link ? (
               <Link
                 key={item.id}
                 href={item.link}
                 className="relative group pb-1 hover:text-orange-400 transition"
-                onClick={closeMenus} // Close menus on navigation for safety
+                onClick={closeMenus}
               >
                 {item.label}
                 <span className="absolute left-0 -bottom-0.5 w-0 h-[2px] bg-orange-500 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ) : (
-              <div key={item.id} className="">
+              <div key={item.id}>
                 <button
                   onClick={() => toggleDropdown(item.id)}
                   className={`flex items-center space-x-1 pb-1 transition ${
@@ -94,142 +123,81 @@ export default function Navbar() {
 
                 {/* Dropdown Content */}
                 {activeDropdown === item.id && (
-                  // You might consider adding a role="menu" or similar for accessibility
                   <div className="absolute left-0 top-full p w-screen bg-[#1C1C1C] text-white pt-28 pb-10 px-20 shadow-2xl border-t border-gray-800">
                     <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-sm leading-relaxed">
                       {item.id === "what-we-do" && (
-                        <>
-                          <div>
-                            <h3 className="text-orange-500 text-2xl   mb-3">
-                              Marketing Services
-                            </h3>
-                            <ul className="space-y-2">
-                              <li>
+                        <div>
+                          <h3 className="text-orange-500 text-2xl mb-3">
+                            Digital Marketing
+                          </h3>
+                          <ul className="space-y-2">
+                            {[
+                              { label: "SEO & SEM", href: "/seo" },
+                              { label: "Paid Advertising", href: "/ppc" },
+                              { label: "Social Media Growth", href: "/smm" },
+                              { label: "Content Strategy", href: "/cm" },
+                            ].map((link) => (
+                              <li key={link.href}>
                                 <Link
-                                  href="/seo"
+                                  href={link.href}
                                   className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
+                                  onClick={closeMenus}
                                 >
-                                  Search Engine Optimization
+                                  {link.label}
                                 </Link>
                               </li>
-                              <li>
-                                <Link
-                                  href="/ppc"
-                                  className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
-                                >
-                                  Advertisement
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/smm"
-                                  className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
-                                >
-                                  Social Media Marketing
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/cm"
-                                  className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
-                                >
-                                  Content Marketing
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-                        </>
+                            ))}
+                          </ul>
+                        </div>
                       )}
-
-                      {item.id === "design" && (
-                        <>
-                          <div>
-                            <h3 className="text-orange-500 text-2xl   mb-3">
-                              Design Service
-                            </h3>
-                            <ul className="space-y-2">
-                              <li>
+                      {item.id === "Creative Studio" && (
+                        <div>
+                          <h3 className="text-orange-500 text-2xl mb-3">
+                            Creative Studio
+                          </h3>
+                          <ul className="space-y-2">
+                            {[
+                              { label: "Web & App Design", href: "/ud" },
+                              { label: "Brand & Graphic Design", href: "/gd" },
+                              { label: "Video Production", href: "/vd" },
+                              { label: "Motion & CGI Ads", href: "/cgi" },
+                            ].map((link) => (
+                              <li key={link.href}>
                                 <Link
-                                  href="/ud"
+                                  href={link.href}
                                   className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
+                                  onClick={closeMenus}
                                 >
-                                  UX/UI Design
+                                  {link.label}
                                 </Link>
                               </li>
-                              <li>
-                                <Link
-                                  href="/gd"
-                                  className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
-                                >
-                                  Graphic Designs
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/vd"
-                                  className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
-                                >
-                                  Video Editing
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/cgi"
-                                  className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
-                                >
-                                  CGI Ads
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-                        </>
+                            ))}
+                          </ul>
+                        </div>
                       )}
-
                       {item.id === "who-we-are" && (
-                        <>
-                          <div>
-                            <h3 className="text-orange-500 text-2xl   mb-3">
-                              Company
-                            </h3>
-                            <ul className="space-y-2">
-                              <li>
+                        <div>
+                          <h3 className="text-orange-500 text-2xl mb-3">
+                            About Us
+                          </h3>
+                          <ul className="space-y-2">
+                            {[
+                              { label: "Our Story", href: "/aboutus" },
+                              { label: "Get in Touch", href: "/contactus" },
+                              { label: "The Journey", href: "/history" },
+                            ].map((link) => (
+                              <li key={link.href}>
                                 <Link
-                                  href="/aboutus"
+                                  href={link.href}
                                   className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
+                                  onClick={closeMenus}
                                 >
-                                  About Us
+                                  {link.label}
                                 </Link>
                               </li>
-                              <li>
-                                <Link
-                                  href="/contactus"
-                                  className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
-                                >
-                                  Contact Us
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  href="/history"
-                                  className="hover:text-orange-400"
-                                  onClick={closeMenus} // Close menus on navigation
-                                >
-                                  History
-                                </Link>
-                              </li>
-                            </ul>
-                          </div>
-                        </>
+                            ))}
+                          </ul>
+                        </div>
                       )}
                     </div>
                   </div>
@@ -240,18 +208,58 @@ export default function Navbar() {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center space-x-6">
-          <button className="hover:text-orange-400 transition" onClick={closeMenus}>
+        <div className="flex items-center space-x-6 relative">
+          {/* --- Search Button --- */}
+          <button
+            className="hover:text-orange-400 transition"
+            onClick={() => setSearchOpen(!searchOpen)}
+          >
             <Search className="w-5 h-5" />
           </button>
 
+          {/* --- Search Input Overlay --- */}
+          {searchOpen && (
+            <div className="absolute right-0 top-12 bg-[#1C1C1C] border border-gray-700 rounded-md p-3 w-64 shadow-lg">
+              <form onSubmit={handleSearchSubmit}>
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-transparent border-b border-gray-600 focus:border-orange-400 outline-none p-1 text-sm"
+                />
+              </form>
+              {filteredPages.length > 0 && (
+                <ul className="mt-2 space-y-1 text-sm">
+                  {filteredPages.map((page) => (
+                    <li key={page.path}>
+                      <button
+                        onClick={() => {
+                          router.push(page.path);
+                          closeMenus();
+                        }}
+                        className="w-full text-left hover:text-orange-400 transition"
+                      >
+                        {page.name}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {searchQuery && filteredPages.length === 0 && (
+                <p className="text-gray-400 text-sm mt-2">No results found.</p>
+              )}
+            </div>
+          )}
+
+          {/* Region dropdown */}
           <div className="relative">
             <button
               onClick={() => toggleDropdown("region")}
               className="flex items-center space-x-1 hover:text-orange-400 transition"
             >
               <Globe className="w-5 h-5" />
-              <span className="  text-sm font-semibold">India</span>
+              <span className="text-sm font-semibold">India</span>
               <ChevronDown className="w-4 h-4" />
             </button>
             {activeDropdown === "region" && (
@@ -261,7 +269,7 @@ export default function Navbar() {
                     key={r}
                     href="#"
                     className="block px-4 py-2 hover:text-orange-400"
-                    onClick={closeMenus} // Close menus on selection
+                    onClick={closeMenus}
                   >
                     {r}
                   </a>
@@ -270,11 +278,8 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Mobile menu toggle */}
-          <button
-            className="md:hidden"
-            onClick={toggleMobileMenu} // Use the new helper function
-          >
+          {/* Mobile toggle */}
+          <button className="md:hidden" onClick={toggleMobileMenu}>
             {mobileOpen ? (
               <X className="w-6 h-6" />
             ) : (
@@ -301,7 +306,7 @@ export default function Navbar() {
   <div className="md:hidden bg-black border-t border-gray-800 py-4 px-6 space-y-4">
     {[
       {
-        label: "Marketing Services",
+        label: "Digital Marketing",
         id: "marketing",
         links: [
           { label: "Search Engine Optimization", href: "/seo" },
@@ -325,7 +330,7 @@ export default function Navbar() {
         href: "/ow",
       },
       {
-        label: "Who We Are",
+        label: "About Us",
         id: "who",
         links: [
           { label: "About Us", href: "/aboutus" },

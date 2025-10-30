@@ -20,7 +20,7 @@ export default function HeroSection() {
               <span className="block text-6xl md:text-7xl lg:text-8xl mb-4">
                 Immersive 3D
               </span>
-              <span className="block text-7xl md:text-7xl lg:text-8xl">
+              <span className="block text-7xl pb-10 md:text-7xl lg:text-8xl">
                 Infinite Possibilities
               </span>
             </h1>

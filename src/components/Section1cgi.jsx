@@ -5,34 +5,34 @@ import Image from 'next/image';
 const articles = [
   {
     id: 1,
-    title: 'BUNDLES & CLOSURES',
-    subtitle: 'Bundles and Closures',
-    description: 'Introducing bundles and closures in Geometry Nodes in Blender 5.0.',
-    imageUrl: '/images/bundles_closures.jpg', // Replace with your actual image path
+    title: '3D PRODUCT VISUALIZATION ADS',
+    subtitle: '3D PRODUCT VISUALIZATION ADS',
+    description: 'Create realistic, interactive 3D models of products for ads and websites.',
+    imageUrl: '/Images/s1cgi1.jpg', // Replace with your actual image path
     imageAlt: 'Bundles and Closures in Blender',
   },
   {
     id: 2,
-    title: 'SOCKET SHAPE REDESIGN',
-    subtitle: 'New Socket Shapes',
-    description: 'Changing the meaning of socket shapes for Blender 5.0.',
-    imageUrl: '/images/socket_redesign.jpg', // Replace with your actual image path
+    title: '3D ANIMATED ADVERTISEMENTS',
+    subtitle: '3D ANIMATED ADVERTISEMENTS',
+    description: 'Develop eye-catching 3D animation videos for social media, YouTube, or TV ads.',
+    imageUrl: '/Images/s1cgi2.jpg', // Replace with your actual image path
     imageAlt: 'Socket Shape Redesign in Blender',
   },
   {
     id: 3,
-    title: 'BLENDER FOR WINDOWS ON ARM',
-    subtitle: 'Blender for Windows on Arm',
-    description: 'Past, present and future work to make Blender available for Windows on Arm.',
-    imageUrl: '/images/blender_arm.jpg', // Replace with your actual image path
+    title: '3D BILLBOARD & MOTION GRAPHICS ADS',
+    subtitle: '3D BILLBOARD & MOTION GRAPHICS ADS',
+    description: 'Design 3D visuals and motion graphics for digital billboards and online campaigns.',
+    imageUrl: '/Images/s1cgi3.jpg', // Replace with your actual image path
     imageAlt: 'Blender for Windows on Arm',
   },
   {
     id: 4,
-    title: 'GEOMETRY NODES WORKSHOP JULY 2025',
-    subtitle: 'Geometry Nodes Workshop: July 2025',
-    description: 'Summary of what was discussed at the Geometry Nodes workshop in July 2025.',
-    imageUrl: '/images/geometry_nodes.jpg', // Replace with your actual image path
+    title: 'AR/VR 3D EXPERIENCE ADS',
+    subtitle: 'AR/VR 3D EXPERIENCE ADS',
+    description: 'Create immersive augmented or virtual reality ad experiences using 3D assets.',
+    imageUrl: '/Images/s1cgi4.jpg', // Replace with your actual image path
     imageAlt: 'Geometry Nodes Workshop',
   },
 ];
@@ -42,7 +42,7 @@ const BlenderDevelopment = () => {
     <div className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <h2 className="text-3xl font-semibold text-gray-900 mb-8">Blender Development</h2>
+        <h2 className="text-3xl font-semibold text-gray-900 mb-8">Creative Motion, Digital Magic</h2>
 
         {/* Articles Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -61,7 +61,7 @@ const BlenderDevelopment = () => {
                   className="transition-transform duration-300 group-hover:scale-105"
                 />
                 {/* Optional: Dark overlay on image for text readability if needed */}
-                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-end p-4">
+                <div className="">
                   <h3 className="text-white text-xl font-bold">{article.title}</h3>
                 </div>
               </div>

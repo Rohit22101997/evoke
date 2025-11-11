@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const TeamCarousel = () => {
   const teamMembers = [
     { name: "Emily Kim", role: "Founder" },
-    { name: "Michael Steward", role: "Creative Director" },
+    { name: "Ayushi Garg", role: "Visual Designer" },
     { name: "Emma Rodriguez", role: "Lead Developer" },
     { name: "Julia Gimmel", role: "UX Designer" },
     { name: "Lisa Anderson", role: "Marketing Manager" },
@@ -122,17 +122,17 @@ const TeamCarousel = () => {
                 onClick={() => updateCarousel(index)}
               >
                 <img
-                  src={`https://images.unsplash.com/photo-${[
-                    '1573497019940-1c28c88b4f3e',
-                    '1568602471122-7832951cc4c5',
-                    '1573496359142-b8d87734a5a2',
-                    '1494790108377-be9c29b29330',
-                    '1655249481446-25d575f1c054',
-                    '1519085360753-af0119f7cbe7'
-                  ][index]}?auto=format&fit=crop&w=600&q=80`}
-                  alt={member.name}
-                  className="w-full h-full object-cover transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
-                />
+  src={`/Images/${[
+    'member1.jpg',
+    'member2.jpg',
+    'member3.jpg',
+    'member4.jpg',
+    'member5.jpg',
+    'member6.jpg'
+  ][index]}`}
+  alt={member.name}
+  className="w-full h-full object-cover transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+/>
               </div>
             );
           })}

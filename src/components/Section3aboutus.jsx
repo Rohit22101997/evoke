@@ -8,39 +8,39 @@ export default function CaseStudiesGrid() {
   const caseStudies = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&h=600&fit=crop',
-      title: 'Efficiency and Excellence: Total IT Global\'s Strategic Expertise Transforms Multinational Telecom Giant\'s Operations Across 70+ Sites',
-      category: 'Telecommunications'
+      image: '/Images/aboutuss31.jpg?w=800&h=600&fit=crop',
+      title: 'How Evoke Digital Helped a Real Estate Brand Generate ₹5 Crore Sales in 90 Days',
+      category: 'Real Estate'
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&h=600&fit=crop',
-      title: 'Total IT Global Resource Expertise and Priority-driven Service for International Confectionery Company',
-      category: 'Manufacturing'
+      image: '/Images/aboutuss32.jpg?w=800&h=600&fit=crop',
+      title: 'From Zero to 10,000 Leads: The Growth Journey of a Startup with Evoke Digital',
+      category: 'Startup'
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop',
-      title: 'Rapid Transition & Flexible Support: How Total IT Global Tackled Complex Challenges for an Industrial Tech Giant',
-      category: 'Industrial Technology'
+      image: '/Images/aboutuss33.jpg?w=800&h=600&fit=crop',
+      title: 'How a Local Retailer Became a Citywide Brand Through Our Strategic Digital Campaigns',
+      category: 'New Business'
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
-      title: 'Global Pharmaceutical Company Achieves Safety and Compliance Excellence with Total IT Global\'s Dedicated Support',
-      category: 'Healthcare'
+      image: '/Images/aboutuss34.jpg?w=800&h=600&fit=crop',
+      title: 'Turning Clicks into Conversions: How Evoke Digital Boosted ROI by 300% for a Client',
+      category: 'E-commerce'
     },
     {
       id: 5,
-      image: 'https://images.unsplash.com/photo-1586864387634-5a5d0a9d3f2e?w=800&h=600&fit=crop',
-      title: 'New Zealand Dairy uses Total IT Global\'s Expertise in Predictive Wireless Site Surveys to assess its Wireless Infrastructure',
-      category: 'Agriculture'
+      image: '/Images/aboutuss35.jpg?w=800&h=600&fit=crop',
+      title: 'Transforming a Fitness Brand’s Online Presence into a ₹1 Crore Monthly Sales Engine',
+      category: 'Fitness'
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop',
-      title: 'Global FMCG MNC Partners with Total IT Global for Seamless Onsite IT Support and Data Security Solutions',
-      category: 'Consumer Goods'
+      image: '/Images/aboutuss36.jpg?w=800&h=600&fit=crop',
+      title: 'How Evoke Digital’s SEO Strategy Took a New Website to Google’s First Page in 60 Days',
+      category: 'Digital Marketing'
     }
   ];
 

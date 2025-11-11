@@ -37,19 +37,17 @@ const StrategicServicesSection = () => {
               <p className="text-lg text-gray-400 mb-4">Proven ROI</p>
               <div className="flex items-center space-x-2">
                 {/* Placeholder for small avatar images */}
-                <div className="w-8 h-8 bg-gray-600 rounded-full"></div>
-                <div className="w-8 h-8 bg-gray-600 rounded-full -ml-3"></div>
-                <div className="w-8 h-8 bg-gray-600 rounded-full -ml-3"></div>
+              
                 <p className="text-sm text-gray-400">5K Businesses</p>
               </div>
             </div>
           </div>
 
           {/* Right Services List */}
-          <div className="space-y-8">
+          <div className=" space-y-8 py-10 ">
             {/* Service Item 1 */}
             <div className="flex items-start">
-              <img src="/placeholder-innovative.jpg" alt="Innovative Solutions" className="w-24 h-24 object-cover rounded-lg mr-6 hidden sm:block" /> {/* Placeholder image */}
+              
               <div>
                 <h3 className="text-2xl font-bold mb-2">Innovative Solutions</h3>
                 <p className="text-gray-700">
@@ -61,7 +59,7 @@ const StrategicServicesSection = () => {
 
             {/* Service Item 2 */}
             <div className="flex items-start">
-              <img src="/placeholder-team.jpg" alt="Expert Team" className="w-24 h-24 object-cover rounded-lg mr-6 hidden sm:block" /> {/* Placeholder image */}
+              
               <div>
                 <h3 className="text-2xl font-bold mb-2">Expert Team</h3>
                 <p className="text-gray-700">
@@ -73,7 +71,7 @@ const StrategicServicesSection = () => {
 
             {/* Service Item 3 */}
             <div className="flex items-start">
-              <img src="/placeholder-client.jpg" alt="Client-Centric Approach" className="w-24 h-24 object-cover rounded-lg mr-6 hidden sm:block" /> {/* Placeholder image */}
+              
               <div>
                 <h3 className="text-2xl font-bold mb-2">Client-Centric Approach</h3>
                 <p className="text-gray-700">

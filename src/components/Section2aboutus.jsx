@@ -1,155 +1,51 @@
-// components/TeamSlider.jsx (Updated with increased card height)
-"use client"
-import { useState } from 'react';
 
-const teamMembers = [
-  {
-    name: 'Rohit Kumar',
-    title: 'CEO & Founder',
-    description: 'Alice has over 5+ years of experience in strategic leadership and business development. Our guiding force, she ensures we stay ahead of industry trends.',
-    image: 'https://via.placeholder.com/150/0000FF/FFFFFF?text=Alice', // Placeholder for Alice, will be replaced by actual orange card
-    social: {
-      linkedin: '#',
-      twitter: '#',
-      instagram: '#',
-    },
-    isFeatured: true, // Special styling for Alice
-  },
-  {
-    name: 'Carter Botosh',
-    title: 'Chief Financial Officer',
-    description: '',
-    image: 'https://via.placeholder.com/150/CCCCCC/000000?text=Carter', // Placeholder image
-  },
-  {
-    name: 'Philip Ekstrom',
-    title: 'Head of Technology',
-    description: '',
-    image: 'https://via.placeholder.com/150/CCCCCC/000000?text=Philip', // Placeholder image
-  },
-  {
-    name: 'Abram Culhane',
-    title: 'Head of Technology',
-    description: '',
-    image: 'https://via.placeholder.com/150/CCCCCC/000000?text=Abram', // Placeholder image
-  },
-  {
-    name: 'Sarah Chen',
-    title: 'Head of Marketing',
-    description: '',
-    image: 'https://via.placeholder.com/150/CCCCCC/000000?text=Sarah', // Placeholder image
-  },
-  {
-    name: 'David Lee',
-    title: 'Lead Developer',
-    description: '',
-    image: 'https://via.placeholder.com/150/CCCCCC/000000?text=David', // Placeholder image
-  },
-];
+"use client";
+import React from 'react';
 
-const TeamSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  // If the first item is featured, it should always be visible.
-  const featuredMember = teamMembers[0].isFeatured ? teamMembers[0] : null;
-  const slideMembers = featuredMember ? teamMembers.slice(1) : teamMembers;
-  
-  // Cards per page calculation for the sliding part
-  const cardsPerView = featuredMember ? 3 : 4;
-  const maxIndex = Math.max(0, slideMembers.length - cardsPerView);
-
-  const handleSlidePrev = () => {
-    setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 1));
-  };
-
-  const handleSlideNext = () => {
-    setCurrentIndex((prevIndex) => Math.min(maxIndex, prevIndex + 1));
-  };
-
-
+const Section2aboutus = () => {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-12">
-          <div>
-            <span className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-800 border border-gray-300">
-              Express
-            </span>
-            <h2 className="mt-6 text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-              Discover the full power of our <br />
-              marketing solutions. 
-            </h2>
-          </div>
-          <div className="flex space-x-3">
-            <button
-              onClick={handleSlidePrev}
-              disabled={currentIndex === 0}
-              className={`p-3 rounded-full border border-gray-300 ${
-                currentIndex === 0 ? 'text-gray-400 bg-gray-100 cursor-not-allowed' : 'text-orange-600 hover:bg-orange-50 transition-colors'
-              }`}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-            </button>
-            <button
-              onClick={handleSlideNext}
-              disabled={currentIndex >= maxIndex}
-              className={`p-3 rounded-full border border-gray-300 ${
-                currentIndex >= maxIndex ? 'text-gray-400 bg-gray-100 cursor-not-allowed' : 'text-orange-600 hover:bg-orange-50 transition-colors'
-              }`}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </button>
-          </div>
+    <section className="py-10 bg-white sm:py-16 lg:py-24">
+    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">How does it work?</h2>
+            <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
         </div>
 
-        <div className="flex relative">
-          {featuredMember && (
-            <div className="w-full lg:w-1/4 flex-shrink-0 p-2">
-              {/* Feature card now has h-72 to match the height of the sliding container */}
-              <div className="bg-orange-600 text-white rounded-lg p-6 h-72 flex flex-col justify-between">
+        <div className="relative mt-12 lg:mt-20">
+            <div className="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
+                <img className="w-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg" alt="" />
+            </div>
+
+            <div className="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
                 <div>
-                  <h3 className="text-xl font-semibold">{featuredMember.name}</h3>
-                  <p className="text-sm opacity-80 mt-1">{featuredMember.title}</p>
-                  <p className="text-sm opacity-90 mt-4">{featuredMember.description}</p>
-                </div>
-                {/* Social icons here... (omitted for brevity) */}
-                <div className="flex space-x-3 mt-6">
-                  {/* ... social icons SVGs ... */}
-                </div>
-              </div>
-            </div>
-          )}
-
-          <div className={`overflow-hidden ${featuredMember ? 'lg:w-3/4' : 'w-full'}`}>
-            <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`, width: `${slideMembers.length * 100 / cardsPerView}%` }}
-            >
-              {slideMembers.map((member, index) => (
-                <div
-                  key={index}
-                  className={`flex-shrink-0 p-2 ${featuredMember ? 'w-1/3' : 'w-1/4'}`}
-                >
-                  {/* Regular card height increased to h-72 */}
-                  <div className="bg-gray-100 rounded-lg p-6 flex flex-col items-center justify-center text-center h-72">
-                    <div className="w-24 h-24 rounded-full overflow-hidden mb-4 bg-gray-300 flex items-center justify-center">
-                      <img src={member.image} alt={member.name} className="object-cover w-full h-full" />
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                        <span className="text-xl font-semibold text-gray-700"> 1 </span>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-                    <p className="text-sm text-gray-600 mt-1">{member.title}</p>
-                  </div>
+                    <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Create a free account</h3>
+                    <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
                 </div>
-              ))}
+
+                <div>
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                        <span className="text-xl font-semibold text-gray-700"> 2 </span>
+                    </div>
+                    <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Build your website</h3>
+                    <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>
+
+                <div>
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                        <span className="text-xl font-semibold text-gray-700"> 3 </span>
+                    </div>
+                    <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Release & Launch</h3>
+                    <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
+
   );
 };
 
-export default TeamSlider;
+export default Section2aboutus;

@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16">
+      <div className="relative z-10  flex h-full flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-24 py-12 sm:py-16">
         {/* Main Heading */}
         <h1 className="mb-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase leading-tight text-white">
           Content That

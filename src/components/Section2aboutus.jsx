@@ -8,7 +8,7 @@ const Section2aboutus = () => {
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">How does it work?</h2>
-            <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+            <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">At Evoke Digital, we make your brand’s growth simple and strategic. Our process blends creativity, technology, and data-driven marketing to deliver measurable success.</p>
         </div>
 
         <div className="relative mt-12 lg:mt-20">
@@ -21,24 +21,24 @@ const Section2aboutus = () => {
                     <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                         <span className="text-xl font-semibold text-gray-700"> 1 </span>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Create a free account</h3>
-                    <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Create a Free Consultation</h3>
+                    <p className="mt-4 text-base text-gray-600">Start by connecting with us for a free strategy consultation. We’ll understand your goals, target audience, and business vision to craft a personalized digital marketing roadmap.</p>
                 </div>
 
                 <div>
                     <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                         <span className="text-xl font-semibold text-gray-700"> 2 </span>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Build your website</h3>
-                    <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Build Your Digital Presence</h3>
+                    <p className="mt-4 text-base text-gray-600">From website design to SEO, social media, and paid campaigns — we develop and optimize your digital ecosystem to ensure your brand stands out and connects with the right audience.</p>
                 </div>
 
                 <div>
                     <div className="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                         <span className="text-xl font-semibold text-gray-700"> 3 </span>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Release & Launch</h3>
-                    <p className="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Launch & Scale</h3>
+                    <p className="mt-4 text-base text-gray-600">Once your campaigns go live, we monitor performance, refine strategies, and scale results helping your brand achieve consistent growth and long-term impact.</p>
                 </div>
             </div>
         </div>

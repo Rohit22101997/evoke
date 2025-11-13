@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, Search, Globe, X } from "lucide-react";
+import { ChevronDown, Search, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -208,72 +208,48 @@ export default function Navbar() {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center space-x-6 relative">
-          {/* --- Search Button --- */}
-          <button
-            className="hover:text-orange-400 transition"
-            onClick={() => setSearchOpen(!searchOpen)}
-          >
-            <Search className="w-5 h-5" />
-          </button>
-
-          {/* --- Search Input Overlay --- */}
-          {searchOpen && (
-            <div className="absolute right-0 top-12 bg-[#1C1C1C] border border-gray-700 rounded-md p-3 w-64 shadow-lg">
-              <form onSubmit={handleSearchSubmit}>
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-transparent border-b border-gray-600 focus:border-orange-400 outline-none p-1 text-sm"
-                />
-              </form>
-              {filteredPages.length > 0 && (
-                <ul className="mt-2 space-y-1 text-sm">
-                  {filteredPages.map((page) => (
-                    <li key={page.path}>
-                      <button
-                        onClick={() => {
-                          router.push(page.path);
-                          closeMenus();
-                        }}
-                        className="w-full text-left hover:text-orange-400 transition"
-                      >
-                        {page.name}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {searchQuery && filteredPages.length === 0 && (
-                <p className="text-gray-400 text-sm mt-2">No results found.</p>
-              )}
-            </div>
-          )}
-
-          {/* Region dropdown */}
+        <div className="flex items-center space-x-6">
+          {/* --- Search Button with Popup --- */}
           <div className="relative">
             <button
-              onClick={() => toggleDropdown("region")}
-              className="flex items-center space-x-1 hover:text-orange-400 transition"
+              className="hover:text-orange-400 transition"
+              onClick={() => setSearchOpen(!searchOpen)}
             >
-              <Globe className="w-5 h-5" />
-              <span className="text-sm font-semibold">India</span>
-              <ChevronDown className="w-4 h-4" />
+              <Search className="w-5 h-5" />
             </button>
-            {activeDropdown === "region" && (
-              <div className="absolute right-0 mt-2 bg-[#1C1C1C] border border-gray-800 rounded-md w-32 py-2 shadow-lg">
-                {["India", "USA", "UK"].map((r) => (
-                  <a
-                    key={r}
-                    href="#"
-                    className="block px-4 py-2 hover:text-orange-400"
-                    onClick={closeMenus}
-                  >
-                    {r}
-                  </a>
-                ))}
+
+            {/* --- Search Input Overlay (positioned to the left of button) --- */}
+            {searchOpen && (
+              <div className="absolute right-full top-0 mr-2 bg-[#1C1C1C] border border-gray-700 rounded-md p-3 w-64 shadow-lg">
+                <form onSubmit={handleSearchSubmit}>
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full bg-transparent border-b border-gray-600 focus:border-orange-400 outline-none p-1 text-sm"
+                  />
+                </form>
+                {filteredPages.length > 0 && (
+                  <ul className="mt-2 space-y-1 text-sm">
+                    {filteredPages.map((page) => (
+                      <li key={page.path}>
+                        <button
+                          onClick={() => {
+                            router.push(page.path);
+                            closeMenus();
+                          }}
+                          className="w-full text-left hover:text-orange-400 transition"
+                        >
+                          {page.name}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {searchQuery && filteredPages.length === 0 && (
+                  <p className="text-gray-400 text-sm mt-2">No results found.</p>
+                )}
               </div>
             )}
           </div>
@@ -302,96 +278,94 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-{mobileOpen && (
-  <div className="md:hidden bg-black border-t border-gray-800 py-4 px-6 space-y-4">
-    {[
-      {
-        label: "Digital Marketing",
-        id: "marketing",
-        links: [
-          { label: "Search Engine Optimization", href: "/seo" },
-          { label: "Advertisement", href: "/ppc" },
-          { label: "Social Media Marketing", href: "/smm" },
-          { label: "Content Marketing", href: "/cm" },
-        ],
-      },
-      {
-        label: "Design",
-        id: "design",
-        links: [
-          { label: "UX/UI Design", href: "/ud" },
-          { label: "Graphic Designs", href: "/gd" },
-          { label: "Video Editing", href: "/vd" },
-          { label: "CGI Ads", href: "/cgi" },
-        ],
-      },
-      {
-        label: "Our Work",
-        href: "/ow",
-      },
-      {
-        label: "About Us",
-        id: "who",
-        links: [
-          { label: "About Us", href: "/aboutus" },
-          { label: "Contact Us", href: "/contactus" },
-          { label: "History", href: "/history" },
-        ],
-      },
-    ].map((item) => (
-      <div key={item.label}>
-        {/* If it has sublinks */}
-        {item.links ? (
-          <div>
-            <button
-              onClick={() =>
-                setActiveDropdown(activeDropdown === item.id ? null : item.id)
-              }
-              className="flex justify-between w-full items-center text-left hover:text-orange-400"
-            >
-              <span>{item.label}</span>
-              <ChevronDown
-                className={`w-4 h-4 transition-transform ${
-                  activeDropdown === item.id ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-
-            {/* Submenu */}
-            {activeDropdown === item.id && (
-              <div className="pl-4 mt-2 space-y-2 text-sm border-l border-gray-700">
-                {item.links.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="block hover:text-orange-400"
-                    onClick={() => {
-                      setMobileOpen(false); // close mobile menu
-                      setActiveDropdown(null); // close submenus
-                    }}
+      {mobileOpen && (
+        <div className="md:hidden bg-black border-t border-gray-800 py-4 px-6 space-y-4">
+          {[
+            {
+              label: "Digital Marketing",
+              id: "marketing",
+              links: [
+                { label: "Search Engine Optimization", href: "/seo" },
+                { label: "Advertisement", href: "/ppc" },
+                { label: "Social Media Marketing", href: "/smm" },
+                { label: "Content Marketing", href: "/cm" },
+              ],
+            },
+            {
+              label: "Design",
+              id: "design",
+              links: [
+                { label: "UX/UI Design", href: "/ud" },
+                { label: "Graphic Designs", href: "/gd" },
+                { label: "Video Editing", href: "/vd" },
+                { label: "CGI Ads", href: "/cgi" },
+              ],
+            },
+            {
+              label: "Our Work",
+              href: "/ow",
+            },
+            {
+              label: "About Us",
+              id: "who",
+              links: [
+                { label: "About Us", href: "/aboutus" },
+                { label: "Contact Us", href: "/contactus" },
+                { label: "History", href: "/history" },
+              ],
+            },
+          ].map((item) => (
+            <div key={item.label}>
+              {/* If it has sublinks */}
+              {item.links ? (
+                <div>
+                  <button
+                    onClick={() =>
+                      setActiveDropdown(activeDropdown === item.id ? null : item.id)
+                    }
+                    className="flex justify-between w-full items-center text-left hover:text-orange-400"
                   >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        ) : (
-          // If it’s a single link
-          <Link
-            href={item.href}
-            className="block hover:text-orange-400"
-            onClick={() => setMobileOpen(false)}
-          >
-            {item.label}
-          </Link>
-        )}
-      </div>
-    ))}
-  </div>
-)}
+                    <span>{item.label}</span>
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform ${
+                        activeDropdown === item.id ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
 
-      
+                  {/* Submenu */}
+                  {activeDropdown === item.id && (
+                    <div className="pl-4 mt-2 space-y-2 text-sm border-l border-gray-700">
+                      {item.links.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="block hover:text-orange-400"
+                          onClick={() => {
+                            setMobileOpen(false);
+                            setActiveDropdown(null);
+                          }}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                // If it's a single link
+                <Link
+                  href={item.href}
+                  className="block hover:text-orange-400"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }

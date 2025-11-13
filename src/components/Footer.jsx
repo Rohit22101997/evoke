@@ -64,27 +64,27 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm mb-4">Marketing Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/home" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Digital Marketing
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/smm" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Data Analytics
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/ppc" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Advertisement
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/seo" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Search Engine Optimization
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/cm" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Content Marketing
                 </Link>
               </li>
@@ -96,23 +96,23 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm mb-4">Design Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/gd" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Graphic Designing
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/vd" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Video Editing
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/ud" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Web Design
                 </Link>
                 
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/cgi" className="text-slate-400 hover:text-white text-sm transition-colors">
                   CGI Ads
                 </Link>
                 
@@ -125,17 +125,17 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm mb-4">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/contactus" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/history" className="text-slate-400 hover:text-white text-sm transition-colors">
                   History
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/aboutus" className="text-slate-400 hover:text-white text-sm transition-colors">
                  About Us 
                 </Link>
               </li>

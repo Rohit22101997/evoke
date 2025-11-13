@@ -30,7 +30,7 @@ export default function Herocontactus() {
           <p className="text-base sm:text-lg">Tel: +91-9999999999</p>
           <Link
             href="mailto:example@wpp.com"
-            className="text-base sm:text-lg text-blue-300 hover:text-blue-200 transition-colors duration-200 mt-3 sm:mt-4"
+            className="text-base sm:text-lg text-orange-400 hover:text-orange-500 transition-colors duration-200 mt-3 sm:mt-4"
           >
             &rarr; Get Started
           </Link>
@@ -46,7 +46,7 @@ export default function Herocontactus() {
           </p>
           <Link
             href="/our-companies"
-            className="text-base sm:text-lg text-blue-300 hover:text-blue-200 transition-colors duration-200 mt-3 sm:mt-4"
+            className="text-base sm:text-lg text-orange-400 hover:text-orange-500 transition-colors duration-200 mt-3 sm:mt-4"
           >
             &rarr; Find out more
           </Link>
@@ -63,7 +63,7 @@ export default function Herocontactus() {
           </p>
           <Link
             href="mailto:sales@evokedigital.com"
-            className="text-base sm:text-lg text-blue-300 hover:text-blue-200 transition-colors duration-200 mt-3 sm:mt-4"
+            className="text-base sm:text-lg text-orange-400 hover:text-orange-500 transition-colors duration-200 mt-3 sm:mt-4"
           >
             &rarr; Email
           </Link>

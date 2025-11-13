@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 const TeamCarousel = () => {
   const teamMembers = [
-    { name: "Emily Kim", role: "Founder" },
+    { name: "Rohit Kumar", role: "Founder" },
     { name: "Ayushi Garg", role: "Visual Designer" },
     { name: "Emma Rodriguez", role: "Lead Developer" },
     { name: "Julia Gimmel", role: "UX Designer" },
@@ -123,7 +123,7 @@ const TeamCarousel = () => {
               >
                 <img
   src={`/Images/${[
-    'member1.jpg',
+    'member1.png',
     'member2.jpg',
     'member3.jpg',
     'member4.jpg',

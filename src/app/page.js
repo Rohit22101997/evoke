@@ -26,7 +26,7 @@ export default function Home() {
        <HeroBanner
         lines={["EVOKE DIGITAL : Where","Ideas Meet Digital Impact"]}
         description="New ways of working. New delivery models. Breakthrough intelligence. Delivering more effective, more efficient marketing – at speed and scale."
-        ctaText="Find out more and book a demo"
+        ctaText="Get Started For Transform Your Business"
         ctaHref="/contactus" />
        
        <Ourservices/>

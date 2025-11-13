@@ -25,7 +25,7 @@ export default function AppleIntelligenceSection() {
         <div className="mt-8">
           <a
             href="#"
-            className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200 text-lg font-medium"
+            className="inline-flex items-center text-orange-400 hover:text-orange-500 transition-colors duration-200 text-lg font-medium"
           >
             Learn more about Evoke Digital
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

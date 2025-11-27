@@ -1,0 +1,44 @@
+@import "tailwindcss";
+/* These are the required Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Roboto'; /* Give your font a name */
+  src: url('/font/myfont') format('tff'),
+;
+  font-weight: 400; /* Adjust weight as needed */
+  font-style: normal;
+  font-display: swap; /* Best practice for performance */
+}
+/* You can add more @font-face blocks for different weights/styles */
+
+/* This file is for global styles in a Next.js App Router project. */
+
+/* 1. Define the custom font using @font-face */
+@font-face {
+  font-family: 'myfont'; /* This name is CRITICAL and must match the config */
+  /* NOTE: In Next.js, font files are usually placed in the 'public' folder. 
+     The URL path '/fonts/myfont.ttf' correctly references /public/fonts/myfont.ttf
+  */
+  src: url('/fonts/myfont.ttf') format('truetype'); /* Using the TTF format */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+

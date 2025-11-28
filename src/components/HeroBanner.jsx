@@ -26,7 +26,7 @@ export default function HeroBanner({
   loop
   muted
   playsInline
-  className="absolute inset-0 h-[1200px] w-[2100px] max-w-none select-none object-cover opacity-100 blur-[1px]"
+  className="absolute inset-0 h-[1200px] w-[2100px] max-w-none select-none object-cover opacity-80 blur-[1px]"
 />
         </div>
         {/* Vignette/contrast overlay for readability */}

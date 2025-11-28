@@ -5,7 +5,7 @@
 
 export default function JoinUsSection() {
   return (
-    <section className="flex flex-col md:flex-row min-h-[500px] bg-white text-gray-800">
+    <section className="flex flex-col md:flex-row min-h-[500px]  bg-white text-gray-800">
       {/* Left Section - Image with Text Overlay */}
       <div className="py-10">
         {/* The colorful circle effect is part of this image. 

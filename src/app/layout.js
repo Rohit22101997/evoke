@@ -24,6 +24,15 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+
+        
+<link
+  rel="preload"
+  href="/_next/static/css/some-important.css"
+  as="style"
+/>
+<link rel="stylesheet" href="/_next/static/css/some-important.css" />
+
       </body>
     </html>
   );

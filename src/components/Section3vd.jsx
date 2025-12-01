@@ -11,7 +11,7 @@ const services = [
     title: 'Color Correction',
     description:
       'Enhance every frame with balanced tones, vibrant colors, and cinematic depth for a flawless visual experience.',
-    imageSrc: '/Images/vds32.png', // Replace with your image paths
+    imageSrc: '/Images/vds32.webp', // Replace with your image paths
   },
   {
     title: 'Sound Design',

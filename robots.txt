@@ -35,15 +35,14 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Allow Meta AI Crawler
+
 User-agent: MetaAI
 Allow: /
 
-# Allow Applebot (Siri & Apple Search)
 User-agent: Applebot
 Allow: /
 
-# Allow other standard SEO crawlers
+
 User-agent: Yandex
 Allow: /
 
@@ -56,7 +55,7 @@ Allow: /
 User-agent: ia_archiver
 Allow: /
 
-# Block harmful / spam bots (optional but recommended)
+
 User-agent: SemrushBot
 Disallow: /
 
@@ -71,6 +70,3 @@ Disallow: /
 
 
 Sitemap: https://evoke-xi.vercel.app/sitemap.xml
-
-
-Sitemap: https://evoke-xi.vercel.app/

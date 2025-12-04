@@ -152,17 +152,17 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm mb-4">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/tc" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Terms of service
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/pp" className="text-slate-400 hover:text-white text-sm transition-colors">
                   Privacy policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+                <Link href="/license" className="text-slate-400 hover:text-white text-sm transition-colors">
                   License
                 </Link>
               </li>

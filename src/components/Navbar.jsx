@@ -74,6 +74,27 @@ export default function Navbar() {
   };
 
   return (
+    <>
+    <style jsx global>{`
+        .underline-anim {
+          position: relative;
+          display: inline-block;
+        }
+        .underline-anim::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          height: 2px;
+          width: 0%;
+          background-color: #f97316;
+          transition: width 0.3s ease-in-out;
+        }
+        .underline-anim:hover::after {
+          width: 100%;
+        }
+      `}</style>
+   
     <nav
       ref={navbarRef}
       className="bg-black text-white fixed top-0 w-full z-50 border-b border-gray-800"
@@ -102,7 +123,7 @@ export default function Navbar() {
               <Link
                 key={item.id}
                 href={item.link}
-                className="relative group pb-1 hover:text-orange-400 transition"
+                className="relative group pb-1 underline-anim transition"
                 onClick={closeMenus}
               >
                 {item.label}
@@ -128,7 +149,7 @@ export default function Navbar() {
                     <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-sm leading-relaxed">
                       {item.id === "what-we-do" && (
                         <div>
-                          <h3 className="text-orange-500 text-2xl mb-3">
+                          <h3 className="text-orange-500 text-2xl mb-3 underline-anim">
                             Digital Marketing
                           </h3>
                           <ul className="space-y-2">
@@ -142,7 +163,7 @@ export default function Navbar() {
                               <li key={link.href}>
                                 <Link
                                   href={link.href}
-                                  className="hover:text-orange-400"
+                                  className="underline-anim"
                                   onClick={closeMenus}
                                 >
                                   {link.label}
@@ -154,7 +175,7 @@ export default function Navbar() {
                       )}
                       {item.id === "Creative Studio" && (
                         <div>
-                          <h3 className="text-orange-500 text-2xl mb-3">
+                          <h3 className="text-orange-500 text-2xl mb-3 underline-anim">
                             Creative Studio
                           </h3>
                           <ul className="space-y-2">
@@ -167,7 +188,7 @@ export default function Navbar() {
                               <li key={link.href}>
                                 <Link
                                   href={link.href}
-                                  className="hover:text-orange-400"
+                                  className="underline-anim"
                                   onClick={closeMenus}
                                 >
                                   {link.label}
@@ -179,7 +200,7 @@ export default function Navbar() {
                       )}
                       {item.id === "who-we-are" && (
                         <div>
-                          <h3 className="text-orange-500 text-2xl mb-3">
+                          <h3 className="text-orange-500 text-2xl mb-3 underline-anim">
                             About Us
                           </h3>
                           <ul className="space-y-2">
@@ -191,7 +212,7 @@ export default function Navbar() {
                               <li key={link.href}>
                                 <Link
                                   href={link.href}
-                                  className="hover:text-orange-400"
+                                  className="underline-anim"
                                   onClick={closeMenus}
                                 >
                                   {link.label}
@@ -369,5 +390,6 @@ export default function Navbar() {
         </div>
       )}
     </nav>
+     </>
   );
 }

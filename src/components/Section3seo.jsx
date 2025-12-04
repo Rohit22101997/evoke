@@ -36,17 +36,16 @@ const Slider = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
-  // ✅ Auto-slide every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 4000);
-
     return () => clearInterval(interval);
   }, [currentSlide]);
 
   return (
-    <div className="relative w-screen overflow-hidden bg-black text-white">
+    <div className="relative w-full overflow-hidden bg-black text-white">
+      
       {/* Slides Wrapper */}
       <div
         className="flex transition-transform duration-700 ease-in-out"
@@ -55,38 +54,41 @@ const Slider = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="w-full flex-shrink-0 flex items-center justify-center p-6 sm:p-8"
+            className="w-full flex-shrink-0 p-4 sm:p-6 md:p-8"
           >
-            <div className="flex flex-col md:flex-row w-full max-w-7xl items-center">
+            <div className="flex flex-col md:flex-row w-full max-w-7xl mx-auto items-center gap-8 md:gap-12">
+
               {/* Image Section */}
               <div className="w-full md:w-1/2 relative flex items-center justify-center">
-                <div className="absolute inset-0 bg-orange-500 opacity-50 z-0"></div>
+                <div className="absolute inset-0 bg-orange-500 opacity-50 z-0 rounded-lg"></div>
+
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="relative z-10 w-full h-auto object-cover"
+                  className="relative z-10 w-full h-64 sm:h-80 md:h-full object-cover rounded-lg"
                 />
               </div>
 
               {/* Text Section */}
-              <div className="w-full md:w-1/2 p-6 sm:p-8 md:pl-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-tight">
+              <div className="w-full md:w-1/2 px-2 sm:px-4">
+                <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-3 md:mb-4 leading-snug md:leading-tight">
                   {slide.title}
                 </h2>
-                <p className="text-base sm:text-lg md:text-xl mb-8 leading-relaxed">
+
+                <p className="text-sm sm:text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
                   {slide.description}
                 </p>
+
                 <a
                   href={slide.link}
-                  className="flex items-center text-orange-500 hover:text-orange-400 font-semibold"
+                  className="flex items-center text-orange-500 hover:text-orange-400 font-semibold text-sm sm:text-base"
                 >
                   Read more
                   <svg
-                    className="ml-2 w-5 h-5"
+                    className="ml-2 w-4 h-4 sm:w-5 sm:h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       strokeLinecap="round"
@@ -97,24 +99,20 @@ const Slider = () => {
                   </svg>
                 </a>
               </div>
+
             </div>
           </div>
         ))}
       </div>
 
       {/* Navigation Controls */}
-      <div className="absolute bottom-6 right-6 flex items-center space-x-2">
+      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 flex items-center space-x-2">
+        
         <button
           onClick={prevSlide}
-          className="p-3 bg-gray-700 text-white hover:bg-orange-500 transition-colors"
+          className="p-2 sm:p-3 bg-gray-700 rounded-md hover:bg-orange-500 transition-colors"
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -124,21 +122,15 @@ const Slider = () => {
           </svg>
         </button>
 
-        <div className="px-4 py-2 bg-gray-700 text-white text-sm sm:text-base">
+        <div className="px-3 py-1 sm:px-4 sm:py-2 bg-gray-700 rounded-md text-xs sm:text-sm">
           {currentSlide + 1} / {slides.length}
         </div>
 
         <button
           onClick={nextSlide}
-          className="p-3 bg-gray-700 text-white hover:bg-orange-500 transition-colors"
+          className="p-2 sm:p-3 bg-gray-700 rounded-md hover:bg-orange-500 transition-colors"
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -147,6 +139,7 @@ const Slider = () => {
             ></path>
           </svg>
         </button>
+
       </div>
     </div>
   );

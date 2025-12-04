@@ -5,6 +5,7 @@ import Heropm from "@/components/Heropm";
 import Section1pm from "@/components/Section1pm";
 import Section2pm from "@/components/Section2pm";
 import Section3pm from "@/components/Section3pm";
+import Section6pm from "@/components/Section6pm";
 
 
 
@@ -13,6 +14,9 @@ export default function page() {
     <div>
     <Navbar/>
     <Heropm />
+    <Section6pm/>
+    
+
     <Section3pm/>
 
     <Section1pm/>

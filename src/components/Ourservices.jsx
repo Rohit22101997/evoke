@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
@@ -63,9 +63,10 @@ export default function SpecializationCarousel() {
               Specialization
             </h2>
             <p className="text-gray-600 mt-3 sm:mt-4 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              At EVOKE DIGITAL, we don't just run campaigns. We craft measurable growth strategies.
-              Our team blends data, design, and creativity to help your brand shine across every digital touchpoint.
-            </p>
+  At <span className="font-bold">EVOKE DIGITAL</span>, we don't just run campaigns. 
+  We craft measurable growth strategies. Our team blends data, design, and creativity 
+  to help your brand shine across every digital touchpoint.
+</p>
           </div>
 
           {/* Navigation Controls - Desktop */}

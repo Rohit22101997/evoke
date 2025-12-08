@@ -312,6 +312,7 @@ export default function Navbar() {
                 { label: "Advertisement", href: "/ppc" },
                 { label: "Social Media Marketing", href: "/smm" },
                 { label: "Content Marketing", href: "/cm" },
+                { label: "Performance Marketing", href: "/pm" },
               ],
             },
             {

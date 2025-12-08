@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Evoke Digital",
+  title: "Evoke Digital – Top Digital Marketing Agency in Mumbai | SEO, Ads & Branding",
   description: "Evoke Digital is a digital marketing agency offering SEO, social media, ads, websites, and branding—helping businesses grow with data-driven results and strong ROI.",
 };
 

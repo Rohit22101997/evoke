@@ -8,7 +8,7 @@ export default function AiQuote() {
           {/* Left: image */}
           <div className="overflow-hidden rounded-lg">
             <img
-              src="/images/aq1.jpg"
+              src="/images/aq1.webp"
               alt="Executive seated and smiling during an interview"
               className="w-full h-full object-cover"
             />

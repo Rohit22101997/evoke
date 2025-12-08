@@ -6,7 +6,7 @@ const UseCases = () => {
   // A reusable component for the Image placeholder
   const IconPlaceholder = () => (
     <Image
-      src="/Images/s6gd.jpg" // CHANGE THIS PATH to your actual placeholder image for icons
+      src="/Images/s6gd.gif" // CHANGE THIS PATH to your actual placeholder image for icons
       alt="Use Case Icon Placeholder"
       width={24} // Tailwind's w-6
       height={24} // Tailwind's h-6
@@ -88,7 +88,7 @@ const UseCases = () => {
               `}
             >
               <div className="flex items-center mb-4">
-                <div className="p-3 bg-white/60 backdrop-blur-sm rounded-lg border border-white/30">
+                <div className="p-3 bg-black backdrop-blur-sm rounded-lg border border-orange/60">
                   {item.icon}
                 </div>
               </div>

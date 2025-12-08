@@ -1,5 +1,8 @@
+
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Whatsapp from "@/components/Whatsapp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Evoke Digital – Top Digital Marketing Agency in Mumbai | SEO, Ads & Branding",
+  title: "Evoke Digital – Top Digital Marketing Agency | SEO, Ads & Branding",
   description: "Evoke Digital is a digital marketing agency offering SEO, social media, ads, websites, and branding—helping businesses grow with data-driven results and strong ROI.",
 };
 
@@ -24,6 +27,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Whatsapp />
 
         
 <link

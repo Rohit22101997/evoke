@@ -11,7 +11,7 @@ export default function page() {
     <Herocontactus />
     <Formcontactus />
     <Mapcontactus />
-    <h1>HIII</h1>
+    
 
     <Footer/>
     </div>

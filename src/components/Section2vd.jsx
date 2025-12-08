@@ -21,21 +21,24 @@ const AboutSection = () => {
           <div>
             <h3 className="text-xl sm:text-2xl font-bold mb-4 uppercase">Efficient</h3>
             <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur
+              Smart Production. Faster Delivery. Zero Hassle.
+At Evoke Digital, we streamline the entire video production process—from ideation to final cut. Our optimized workflows, expert team, and modern equipment ensure you get high-quality videos delivered on time, every time. No delays. No complications. Just results that move your brand forward.
             </p>
           </div>
 
           <div>
             <h3 className="text-xl sm:text-2xl font-bold mb-4 uppercase">Professional</h3>
             <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+              Premium Quality, Backed by Creative Expertise.
+Every frame we produce is crafted with precision and purpose. Our team combines storytelling, strategy, and technical excellence to deliver professional-grade videos that elevate your brand. Whether it's a corporate film, ad shoot, product video, or social content—we ensure industry-level quality with a creative edge.
             </p>
           </div>
 
           <div>
             <h3 className="text-xl sm:text-2xl font-bold mb-4 uppercase">Experienced</h3>
             <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur
+              Years of Craft, Countless Successful Projects.
+With extensive experience across multiple industries, we understand what works and what converts. From startups to established brands, we've helped businesses communicate their story visually and effectively. Our experience allows us to handle complex shoots, tight timelines, and creative challenges with confidence.
             </p>
           </div>
         </div>

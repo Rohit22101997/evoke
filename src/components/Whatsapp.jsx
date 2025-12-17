@@ -4,6 +4,12 @@ import { MessageCircle, Send, X, Moon, Sun } from "lucide-react";
 
 export default function Whatspp() {
   const adminNumber = "919045100349";
+
+  /* RESET CHAT HISTORY EVERY TIME WEBSITE LOADS */
+  if (typeof window !== "undefined") {
+    localStorage.removeItem("wa_chat_history");
+  }
+
   const [open, setOpen] = useState(false);
 
   const [theme, setTheme] = useState(() =>
@@ -13,15 +19,10 @@ export default function Whatspp() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState(() => {
     if (typeof window === "undefined") return [];
-    try {
-      return JSON.parse(localStorage.getItem("wa_chat_history") || "[]");
-    } catch {
-      return [];
-    }
+    return [];
   });
 
-  const [isTyping, setIsTyping] = useState(false); // Agent typing indicator
-
+  const [isTyping, setIsTyping] = useState(false);
   const messagesRef = useRef(null);
 
   const quickReplies = [
@@ -36,23 +37,21 @@ export default function Whatspp() {
   }, [theme]);
 
   useEffect(() => {
-    localStorage.setItem("wa_chat_history", JSON.stringify(messages));
     if (messagesRef.current) {
       messagesRef.current.scrollTop = messagesRef.current.scrollHeight + 200;
     }
   }, [messages]);
 
   useEffect(() => {
-    if (messages.length === 0) {
-      setMessages([
-        {
-          id: Date.now(),
-          from: "agent",
-          text: "Hi! 👋 I'm here to help. Tap a quick reply or type your message.",
-          ts: new Date().toISOString(),
-        },
-      ]);
-    }
+    // Always start fresh
+    setMessages([
+      {
+        id: Date.now(),
+        from: "agent",
+        text: "Hi! 👋 I'm here to help. Tap a quick reply or type your message.",
+        ts: new Date().toISOString(),
+      },
+    ]);
   }, []);
 
   const appendMessage = (from, text) => {
@@ -72,7 +71,6 @@ export default function Whatspp() {
     appendMessage("user", trimmed);
     setMessage("");
 
-    // simulate agent typing after 1 second
     setIsTyping(true);
     setTimeout(() => {
       appendMessage("agent", "Thanks for your message! We'll respond shortly.");
@@ -90,6 +88,7 @@ export default function Whatspp() {
   const handleQuickReply = (text) => {
     appendMessage("user", text);
     setMessage("");
+
     setIsTyping(true);
     setTimeout(() => {
       appendMessage("agent", "Thanks for your message! We'll respond shortly.");
@@ -149,7 +148,6 @@ export default function Whatspp() {
               </div>
             </div>
 
-            {/* Right side buttons */}
             <div className="flex items-center gap-2 ml-auto">
               <button
                 onClick={toggleTheme}
@@ -208,7 +206,6 @@ export default function Whatspp() {
               </div>
             ))}
 
-            {/* Typing animation */}
             {isTyping && (
               <div className="max-w-[40%] mr-auto flex items-center gap-1">
                 <div className="px-3 py-2 rounded-2xl bg-neutral-800 text-white flex gap-[3px]">

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function BlurText() {
   return (
-    <div className="w-full py-32 sm:py-48 md:py-60 flex items-center justify-center bg-[#141414] overflow-hidden">
+    <div className="w-full py-32 sm:py-48 md:py-40 flex items-center justify-center bg-[#141414] overflow-hidden">
       <motion.h1
         style={{ letterSpacing: "1px" }}
         initial={{ filter: "blur(20px)", opacity: 0 }}

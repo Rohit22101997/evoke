@@ -2,8 +2,9 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-[70vh] md:min-h-screen bg-gray-900 overflow-hidden">
-      {/* Background Image */}
+    <section className="relative min-h-[80vh] md:min-h-screen bg-gray-900 overflow-hidden">
+      
+      {/* Background */}
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -12,27 +13,44 @@ const Hero = () => {
             filter: "brightness(0.6)",
           }}
         />
-        {/* Black → transparent gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
       </div>
 
-      {/* Foreground Content */}
-      <div className="relative z-10 flex items-center justify-center md:justify-start h-full px-4 sm:px-8 md:px-16 lg:px-10 py-16 sm:py-20 md:py-0">
-        <div className="max-w-2xl text-center ms-10 md:text-left mt-0 sm:mt-4 lg:mt-52">
+      {/* Content */}
+      <div className="relative z-10 flex h-full items-center px-4 sm:px-8 md:px-16 lg:px-24 pb-20 md:pb-32">
+        
+        <div className="max-w-3xl pt-20 md:pt-28 text-left">
+          
+          {/* Heading */}
           <h1
-            className="font-extrabold text-white leading-tight mb-2 sm:mb-4"
-            style={{
-              fontSize: "clamp(2rem, 5vw, 4.2rem)",
-            }}
+            className="font-extrabold py-20 text-white leading-[1.1]"
+            style={{ fontSize: "clamp(2.6rem, 5.5vw, 4.8rem)" }}
           >
-            Turning Videos to a Cinematic Masterpiece
+            Turning Videos Into a Cinematic Masterpiece
           </h1>
-          <button className="mt-1 sm:mt-3 px-6 py-3 bg-orange-500 text-white font-semibold text-base sm:text-lg rounded-md hover:bg-orange-600 transition-colors duration-300">
-            Contact Us
-          </button>
+
+          {/* CTA */}
+          <div className="mt-8">
+            <button
+              className="
+                inline-flex items-center justify-center
+                rounded-md bg-orange-500
+                px-8 py-4
+                sm:px-10 sm:py-5
+                text-base sm:text-lg md:text-xl
+                font-semibold text-white
+                hover:bg-orange-600
+                transition-all duration-300
+              "
+            >
+              Contact Us
+            </button>
+          </div>
+
         </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

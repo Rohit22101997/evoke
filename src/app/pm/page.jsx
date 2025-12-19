@@ -7,6 +7,7 @@ import Section2pm from "@/components/Section2pm";
 import Section3pm from "@/components/Section3pm";
 import Section6pm from "@/components/Section6pm";
 import Section7pm from "@/components/Section7pm";
+import Section8pm from "@/components/Section8pm";
 
 
 
@@ -21,6 +22,7 @@ export default function page() {
     <Section3pm/>
     
     <Section7pm/>
+    <Section8pm/>
     <Section6pm/>
 
     <Section1pm/>

@@ -12,7 +12,7 @@ const customColors = {
 
 const App = () => {
   // Placeholder image URL to mimic the dramatic portrait in the original image
-  const imageUrl = "https://placehold.co/1200x800/222222/FF5A1F?text=Professional+Developer";
+  const imageUrl = "/Images/s2pm.webp";
   
   // Alternative image URL that better captures the mood, but using placehold to comply with rules
   // const imageUrl = "https://placehold.co/1200x800/101010/ff5a1f?text=Dramatic+Portrait";
@@ -30,16 +30,15 @@ const App = () => {
           {/* Text Content */}
           <div className="space-y-6 lg:space-y-8 py-4 lg:py-8">
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-              DESIGNING <span style={{ color: customColors['accent-orange'] }}>+</span> BUILDING
+              DATA <span style={{ color: customColors['accent-orange'] }}>-</span> DRIVEN
               <br />
-              HIGH-PERFORMING
+              PERFORMANCE MARKETING
               <br />
-              WEBSITES
+              FOR SCALABLE GROWTH
             </h1>
             
             <p className="text-lg sm:text-xl leading-relaxed max-w-xl" style={{ color: customColors['text-light'] }}>
-              Hello there, I'm Jane Doe — I craft websites that are user-friendly,
-              beautiful & convert your target audience.
+              EVOKE DIGITAL empowers brands with precision-led performance marketing strategies designed to increase visibility, engagement, and high-quality conversions.
             </p>
           </div>
           
@@ -61,7 +60,7 @@ const App = () => {
                 e.currentTarget.style.color = customColors['accent-orange'];
               }}
             >
-              LET'S START BUILDING YOURS
+              Increase Conversions
             </button>
           </div>
         </div>

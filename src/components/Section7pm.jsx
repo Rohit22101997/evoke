@@ -57,9 +57,12 @@ const InvestorsSection = () => {
 
             <div className="flex items-center gap-2">
               {/* Main Button */}
-              <button className="bg-orange-600 hover:bg-orange-700 transition-colors text-white font-semibold px-8 py-3 rounded-full text-lg">
-                Start Scaling Today
-              </button>
+              <a 
+              href="/contactus"
+              className="bg-orange-600 hover:bg-orange-700 transition-colors text-white font-semibold px-8 py-3 rounded-full text-lg">
+                 Start Scaling Today
+                
+              </a>
               
               {/* Icon Button */}
               <a

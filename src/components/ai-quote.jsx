@@ -14,7 +14,11 @@ export default function AiQuote() {
             />
           </div>
 
+<<<<<<< HEAD
           
+=======
+          {/* Right: quote + meta + link */}
+>>>>>>> 9a1f4c69a04e8ed813a0f35f875fa7e1c4b74a05
           <div className="space-y-6">
             <blockquote className="text-pretty text-justify text-lg font-regular leading-tight sm:text-lg lg:text-xl">
               <span>

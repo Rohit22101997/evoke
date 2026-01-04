@@ -1,0 +1,9 @@
+{
+  "/cgi/page": "app/cgi/page.js",
+  "/contactus/page": "app/contactus/page.js",
+  "/gd/page": "app/gd/page.js",
+  "/history/page": "app/history/page.js",
+  "/page": "app/page.js",
+  "/ppc/page": "app/ppc/page.js",
+  "/seo/page": "app/seo/page.js"
+}

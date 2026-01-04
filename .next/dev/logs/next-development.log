@@ -1,0 +1,69 @@
+[00:00:01.432] Server  LOG      ✓ Ready in 1292ms
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs1.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs1.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs2.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs2.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs3.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs3.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs4.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs4.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs5.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs5.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs6.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs6.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs4.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs3.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:33.574] Browser WARN    Image with src "/Images/ppcs5.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:07.121] Browser WARN    Image with src "/Images/history6.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:06:07.121] Browser WARN    Image with src "/Images/history6.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:06:07.121] Browser WARN    Image with src "/Images/historys5.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:06:07.121] Browser WARN    Image with src "/Images/historys5.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:06:09.778] Browser WARN    Image with src "/Images/history6.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:10.134] Browser WARN    Image with src "/Images/historys5.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[08:47:59.909] Browser WARN    Image with src "/Images/s6gd.jpg" is using quality "80" which is not configured in images.qualities [75]. Please update your config to [75, 80].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[08:47:59.909] Browser WARN    Image with src "/Images/s6gd.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:47:59.909] Browser WARN    Image with src "/Images/s6gd.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:48:04.937] Server  WARN     ⚠ The requested resource "/Images/s6gd.gif" is an animated image so it will not be optimized. Consider adding the "unoptimized" property to the <Image>.
+[08:48:05.041] Browser WARN    Image with src "/Images/s6gd.gif" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[08:48:48.292] Browser WARN    Image with src "/Images/s1cgi1.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:48:48.292] Browser WARN    Image with src "/Images/s1cgi1.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:48:48.292] Browser WARN    Image with src "/Images/s1cgi2.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:48:48.292] Browser WARN    Image with src "/Images/s1cgi2.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:48:48.293] Browser WARN    Image with src "/Images/s1cgi3.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:48:48.293] Browser WARN    Image with src "/Images/s1cgi3.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:48:48.293] Browser WARN    Image with src "/Images/s1cgi4.jpg" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:48:48.293] Browser WARN    Image with src "/Images/s1cgi4.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[08:48:48.293] Browser WARN    Image with src "/Images/s1cgi2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[08:48:48.293] Browser WARN    Image with src "/Images/s1cgi4.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[08:48:48.293] Browser WARN    Image with src "/Images/s1cgi1.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[08:48:48.293] Browser WARN    Image with src "/Images/s1cgi3.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

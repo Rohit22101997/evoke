@@ -1,0 +1,72 @@
+User-agent: AdsBot-Google
+Allow: /
+
+# Allow all major search engines and AI crawlers
+User-agent: *
+Allow: /
+
+# Allow Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+# Allow Bing + Yahoo
+User-agent: Bingbot
+Allow: /
+
+# Allow ChatGPT / GPTBot (OpenAI Web Crawler)
+User-agent: GPTBot
+Allow: /
+
+# Allow ChatGPT-User Agent (Used for browsing)
+User-agent: ChatGPT-User
+Allow: /
+
+# Allow Claude Crawler (Anthropic)
+User-agent: ClaudeBot
+Allow: /
+
+# Allow CommonCrawl (used by many AI systems)
+User-agent: CCBot
+Allow: /
+
+
+User-agent: MetaAI
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+
+User-agent: Yandex
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+
+Sitemap: https://evoke-xi.vercel.app/sitemap.xml
